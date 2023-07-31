@@ -5,28 +5,39 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>SIGA REMAKE</title>
 
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=REM:wght@100;300;400;600&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@300;400;600&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+
+        <link rel="shortcut icon" href="imgs/favicon/favicon-32x32.png" type="image/x-icon" />
         <link rel="stylesheet" href="css/reset.css" />
         <link rel="stylesheet" href="css/main.css" />
     </head>
 
     <body>
-        <header class="headerMobile">
-            <h1>siga</h1>
-        </header>
-        <main class="mainMobile">
-            <form action="" class="mainMobile__login">
-                <div class="login_img">
-                    <img src="imgs/5b078a59390bb4666df98b49f1cdedd0-avatar-de-perfil-masculino.png" alt="" />
-                </div>
-                <div class="login_container">
-                    <input type="text" name="user" id="user" placeholder="Nome" />
-                    <input type="password" name="pass" id="pass" placeholder="Senha" />
-                    <input type="checkbox" name="remember" id="remember" />
-                    <input type="submit" value="Entrar" />
-                    <a href="#">Problemas com login</a>
-                </div>
+        <div class="loading">
+            <img src="imgs/cps/logo_cps_versao_br.png" alt="" />
+            <div class="loading-loader"></div>
+        </div>
+        <div class="content -mobile centralize">
+            <header class="headerLogin">
+                <img src="imgs/cps/logo_cps_versao_br.png" alt="" />
+            </header>
+
+            <form action="" class="login">
+                <img src="imgs/office-worker.png" alt="" class="login_img" />
+                <input type="text" name="user" id="user" placeholder="USUARIO" />
+                <input type="password" name="pass" id="pass" placeholder="SENHA" />
+                <input type="checkbox" name="remember" id="remember" />
+                <label for="remember">Lembrar de min?</label>
+                <input type="submit" value="Entrar" />
+                <a href="#">Problemas com login</a>
             </form>
-        </main>
-        <div class="footer"><h2>Etec - Portal Aluno</h2></div>
+        </div>
+
+        <script src="js/main.js"></script>
     </body>
 </html>

@@ -3,35 +3,85 @@
 }
 
 html {
-    font-family: Bahnschrift;
+    font-family: "REM", sans-serif;
 }
 
 body {
+    background-image: radial-gradient(ellipse, var(--primary-color), rgb(76, 4, 4));
 }
 
-.headerMobile {
-    background-image: linear-gradient(45deg, var(--primary-color), var(--primary-color));
-    min-width: calc(100vw + 5rem);
-    height: 12rem;
-    transform: translateX(-3rem) translateY(-4rem) rotateZ(-20deg);
+.content {
+    display: none;
+}
+.centralize {
+    margin: 0 auto;
+    max-width: 80vw;
+}
+.loading {
+    background-color: var(--primary-color);
+    width: 100vw;
+    height: 100vh;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    align-items: flex-end;
-    padding-bottom: 1rem;
-    animation: headerUp 1s ease-in-out;
+    gap: 5rem;
+    transition: opacity 0.5s ease;
 }
-.headerMobile h1 {
-    color: white;
-    font-size: 2rem;
-    font-size: 4rem;
-    margin-left: -2rem;
+.loading img {
+    width: 15rem;
+}
+.loading-loader {
+    width: 4rem;
+    height: 4rem;
+    border: 9px solid #e5e5e5;
+    border-top-color: #860808;
+    border-radius: 50%;
+    animation: is-rotating 1s infinite;
 }
 
-@keyframes headerUp {
-    0% {
-        transform: translateX(-50rem) translateY(-4rem) rotateZ(-20deg);
-    }
-    100% {
-        transform: translateX(-4rem) translateY(-4rem) rotateZ(-20deg);
+.content {
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.headerLogin {
+    width: 100vw;
+    text-align: center;
+}
+/* .headerLogin h1 {
+    font-family: "Amatic SC", cursive;
+    font-size: 8rem;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    margin: 2rem 0;
+} */
+.headerLogin img {
+    margin: 4rem 0;
+    width: 10rem;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 25px 0 25px 0;
+    width: calc(100vw / 1.2);
+}
+.login_img {
+    width: 8rem;
+    margin: 2rem 0 3rem;
+    background-color: #ccc;
+    border-radius: 50%;
+}
+
+@keyframes is-rotating {
+    to {
+        transform: rotate(1turn);
     }
 }
