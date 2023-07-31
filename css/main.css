@@ -7,6 +7,8 @@ html {
 }
 
 body {
+    min-width: 100vw;
+    min-height: 100vh;
 }
 
 .centralize {
@@ -38,8 +40,8 @@ body {
 }
 
 .contentWarning {
-    width: 100vw;
-    height: 100vh;
+    min-width: 100vw;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -57,12 +59,14 @@ body {
     gap: 5rem;
     width: 20rem;
     padding: 3rem 1rem 4rem;
+    margin-bottom: 3rem;
     font-size: 1.2rem;
     text-align: center;
     border-radius: 15px;
     background-color: white;
 }
 .contentWarning__display select {
+    background-color: white;
     border: 2px solid var(--primary-color);
     border-radius: 15px;
     padding: 0.5rem;
