@@ -22,20 +22,20 @@
             <img src="imgs/cps/logo_cps_versao_br.png" alt="" />
             <div class="loading-loader"></div>
         </div>
-        <div class="content -mobile centralize">
-            <header class="headerLogin">
-                <img src="imgs/cps/logo_cps_versao_br.png" alt="" />
-            </header>
 
-            <form action="" class="login">
-                <img src="imgs/office-worker.png" alt="" class="login_img" />
-                <input type="text" name="user" id="user" placeholder="USUARIO" />
-                <input type="password" name="pass" id="pass" placeholder="SENHA" />
-                <input type="checkbox" name="remember" id="remember" />
-                <label for="remember">Lembrar de min?</label>
-                <input type="submit" value="Entrar" />
-                <a href="#">Problemas com login</a>
-            </form>
+        <div class="contentWarning">
+            <img src="imgs/cps/logo_cps_versao_br.png" alt="" />
+            <div class="contentWarning__display">
+                <p>Bem vindo! Selecione abaixo o modo de como deseja entrar</p>
+                <select name="type" id="selecType">
+                    <option value="">Selecione uma opção</option>
+                    <option value="student">Aluno</option>
+                    <option value="teacher">Professor</option>
+                    <option value="school">Escola</option>
+                    <option value="responsible">Responsável</option>
+                </select>
+                <input type="submit" value="Entrar" class="btnConfirm" />
+            </div>
         </div>
 
         <script src="js/main.js"></script>

@@ -7,21 +7,18 @@ html {
 }
 
 body {
-    background-image: radial-gradient(ellipse, var(--primary-color), rgb(76, 4, 4));
 }
 
-.content {
-    display: none;
-}
 .centralize {
     margin: 0 auto;
     max-width: 80vw;
 }
 .loading {
-    background-color: var(--primary-color);
+    /* background-color: var(--primary-color); */
+    background-image: radial-gradient(ellipse at center, var(--primary-color), rgb(37, 1, 1));
     width: 100vw;
     height: 100vh;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -40,44 +37,54 @@ body {
     animation: is-rotating 1s infinite;
 }
 
-.content {
+.contentWarning {
     width: 100vw;
     height: 100vh;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-}
-
-.headerLogin {
-    width: 100vw;
-    text-align: center;
-}
-/* .headerLogin h1 {
-    font-family: "Amatic SC", cursive;
-    font-size: 8rem;
-    font-weight: bold;
-    text-align: center;
-    color: white;
-    margin: 2rem 0;
-} */
-.headerLogin img {
-    margin: 4rem 0;
-    width: 10rem;
-}
-
-.login {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: white;
-    border-radius: 25px 0 25px 0;
-    width: calc(100vw / 1.2);
+    background-image: radial-gradient(ellipse at top left, var(--primary-color), rgb(37, 1, 1));
 }
-.login_img {
-    width: 8rem;
-    margin: 2rem 0 3rem;
-    background-color: #ccc;
-    border-radius: 50%;
+.contentWarning img {
+    width: 15rem;
+    margin: 3rem 0;
+}
+.contentWarning__display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    width: 20rem;
+    padding: 3rem 1rem 4rem;
+    font-size: 1.2rem;
+    text-align: center;
+    border-radius: 15px;
+    background-color: white;
+}
+.contentWarning__display select {
+    border: 2px solid var(--primary-color);
+    border-radius: 15px;
+    padding: 0.5rem;
+    margin-top: -3rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.btnConfirm {
+    border: none;
+    border-radius: 15px;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+.btnConfirm:hover {
+    background-color: #e40404;
+}
+.btnConfirm:active {
+    background-color: #860808;
 }
 
 @keyframes is-rotating {
