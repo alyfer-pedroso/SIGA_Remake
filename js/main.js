@@ -9,16 +9,20 @@
         let $selecTypeValue = $selecType.value;
         console.log($selecTypeValue);
 
-        $loading.style.opacity = 0;
-        $confirmBTN.removeEventListener("click", changeToLoading);
-        setTimeout(() => {
-            $loading.style.display = "flex";
-            $contentWarning.style.opacity = 0;
+        if ($selecTypeValue != "null") {
+            $loading.style.opacity = 0;
+            $confirmBTN.removeEventListener("click", changeToLoading);
             setTimeout(() => {
-                $loading.style.opacity = 1;
-                $contentWarning.style.display = "none";
-            }, 1000);
-        }, 10);
+                $loading.style.display = "flex";
+                $contentWarning.style.opacity = 0;
+                setTimeout(() => {
+                    $loading.style.opacity = 1;
+                    $contentWarning.style.display = "none";
+                }, 1000);
+            }, 10);
+        } else {
+            alert("Por favor, selecione uma opção ");
+        }
     };
     $confirmBTN.addEventListener("click", changeToLoading);
 })();
