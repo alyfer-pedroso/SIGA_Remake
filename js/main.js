@@ -8,6 +8,7 @@
     let changeToLoading = () => {
         let $selecTypeValue = $selecType.value;
         console.log($selecTypeValue);
+
         $loading.style.opacity = 0;
         $confirmBTN.removeEventListener("click", changeToLoading);
         setTimeout(() => {
