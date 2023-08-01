@@ -4,9 +4,10 @@
     const $confirmBTN = document.querySelector(".btnConfirm");
 
     const $selecType = document.getElementById("selecType");
-    let $selecTypeOptions = $selecType.options;
 
     let changeToLoading = () => {
+        let $selecTypeValue = $selecType.value;
+        console.log($selecTypeValue);
         $loading.style.opacity = 0;
         $confirmBTN.removeEventListener("click", changeToLoading);
         setTimeout(() => {
