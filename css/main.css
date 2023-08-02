@@ -114,6 +114,7 @@ body {
     flex-direction: column;
     /* box-shadow: 0px 0px 65px 5px rgba(0, 0, 0, 0.993); */
     width: 230px;
+    margin-bottom: 5rem;
 }
 .login label {
     font-size: 1.3rem;
