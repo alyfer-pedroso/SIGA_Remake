@@ -1,0 +1,169 @@
+:root {
+    --primary-color: #b20000;
+}
+
+html {
+    font-family: "REM", sans-serif;
+}
+
+body {
+    min-width: 100vw;
+    min-height: 100vh;
+    background-image: radial-gradient(ellipse at center, var(--primary-color), rgb(37, 1, 1));
+}
+
+.centralize {
+    margin: 0 auto;
+    max-width: 80vw;
+}
+.loading {
+    background-image: radial-gradient(ellipse at center, var(--primary-color), rgb(37, 1, 1));
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    transition: opacity 0.5s ease;
+}
+.loading img {
+    width: 15rem;
+}
+.loading-loader {
+    width: 4rem;
+    height: 4rem;
+    border: 9px solid #e5e5e5;
+    border-top-color: #5f0000;
+    border-radius: 50%;
+    animation: is-rotating 1s infinite;
+}
+
+.contentWarning {
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: radial-gradient(ellipse at top left, var(--primary-color), rgb(37, 1, 1));
+    transition: opacity 1s ease-in-out;
+}
+.contentWarning img {
+    width: 15rem;
+    margin: 3rem 0;
+}
+.contentWarning__display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    width: 20rem;
+    padding: 3rem 1rem 4rem;
+    margin-bottom: 3rem;
+    font-size: 1.2rem;
+    text-align: center;
+    border-radius: 15px;
+    background-color: white;
+}
+.contentWarning__display select {
+    background-color: white;
+    border: 2px solid var(--primary-color);
+    border-radius: 15px;
+    padding: 0.5rem;
+    margin-top: -3rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.btnConfirm {
+    border: none;
+    border-radius: 15px;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+.btnConfirm:hover {
+    background-color: #e40404;
+}
+.btnConfirm:active {
+    background-color: #860808;
+}
+
+.login {
+    min-width: 100vw;
+    min-height: 100vh;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    transition: opacity 1s ease-in-out;
+}
+.login img {
+    width: 15rem;
+    margin: 3rem 0;
+}
+.login form {
+    background-color: white;
+    padding: 3rem 4rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 10px 15px 25px 5px rgba(0, 0, 0, 0.993);
+}
+.login label {
+    font-size: 1.3rem;
+}
+.login label:nth-child(1) i {
+    margin-right: 0.1625rem;
+}
+.login label:nth-child(3) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1rem 0 2rem;
+}
+.login input[type="text"],
+.login input[type="password"],
+.login select {
+    border: 2px solid #5f0000;
+    border-radius: 5px;
+    padding: 0.5rem;
+    color: black;
+    margin-bottom: 1rem;
+    outline: none;
+}
+.login input[type="text"]:focus-visible,
+.login input[type="password"]:focus-visible,
+.login select:focus-visible {
+    border: 2px solid rgb(179, 0, 0);
+}
+.login input[type="pass"] {
+    margin-bottom: 2rem;
+}
+.login label:nth-child(3) i {
+    margin-left: 0.9rem;
+}
+.login label:nth-child(3) select {
+    margin-left: 0.9rem;
+}
+.loginBTN {
+    width: 8rem;
+    border: none;
+    border-radius: 15px;
+    padding: 0.8rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: var(--primary-color);
+    cursor: pointer;
+    align-self: center;
+}
+
+@keyframes is-rotating {
+    to {
+        transform: rotate(1turn);
+    }
+}
