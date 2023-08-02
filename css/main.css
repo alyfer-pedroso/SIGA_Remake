@@ -95,7 +95,9 @@ body {
 .login {
     min-width: 100vw;
     min-height: 100vh;
+    opacity: 0;
     display: none;
+    gap: 3rem;
     flex-direction: column;
     align-items: center;
     transition: opacity 1s ease-in-out;
@@ -110,15 +112,20 @@ body {
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    box-shadow: 10px 15px 25px 5px rgba(0, 0, 0, 0.993);
+    /* box-shadow: 0px 0px 65px 5px rgba(0, 0, 0, 0.993); */
+    width: 230px;
 }
 .login label {
     font-size: 1.3rem;
 }
+.login label:nth-child(1),
+.login label:nth-child(2) {
+    /* margin-left: -1rem; */
+}
 .login label:nth-child(1) i {
     margin-right: 0.1625rem;
 }
-.login label:nth-child(3) {
+.login label:nth-child(4) {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -130,24 +137,58 @@ body {
 .login select {
     border: 2px solid #5f0000;
     border-radius: 5px;
-    padding: 0.5rem;
+    padding: 0.5rem 0 0.5rem 0.5rem;
     color: black;
     margin-bottom: 1rem;
     outline: none;
+    width: 182px;
+}
+.login input[type="text"],
+.login input[type="password"] {
+    transition: padding-left 0.5s ease-out;
 }
 .login input[type="text"]:focus-visible,
 .login input[type="password"]:focus-visible,
 .login select:focus-visible {
-    border: 2px solid rgb(179, 0, 0);
+    border-bottom: 3px solid rgb(179, 0, 0);
+}
+.login input[type="text"]:focus-visible,
+.login input[type="password"]:focus-visible {
+    padding-left: 1rem;
 }
 .login input[type="pass"] {
     margin-bottom: 2rem;
 }
-.login label:nth-child(3) i {
-    margin-left: 0.9rem;
+.login label:nth-child(4) i {
+    margin-left: 0.4rem;
 }
-.login label:nth-child(3) select {
-    margin-left: 0.9rem;
+.login label:nth-child(4) select {
+    margin-left: 1rem;
+    text-align: center;
+}
+#remember {
+    visibility: hidden;
+}
+.login label[for="remember"] {
+    font-size: 1rem;
+    color: #5f0000;
+    margin: 0 0 1rem;
+}
+.login:has(input[type="checkbox"]) label[for="remember"]::before {
+    content: "✔";
+    color: #5f0000;
+    background-color: #5f0000;
+    border-radius: 5px;
+    padding: 0 0.2rem;
+    margin-right: 0.7rem;
+}
+.login:has(input[type="checkbox"]:checked) label[for="remember"]::before {
+    content: "✔";
+    color: white;
+    background-color: #5f0000;
+    border-radius: 5px;
+    padding: 0 0.2rem;
+    margin-right: 0.7rem;
 }
 .loginBTN {
     width: 8rem;
