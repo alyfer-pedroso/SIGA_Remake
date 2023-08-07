@@ -9,10 +9,16 @@ html {
 body {
     min-width: 100vw;
     min-height: 100vh;
-    background-image: radial-gradient(ellipse at center, var(--primary-color), rgb(37, 1, 1));
     margin: 0;
     padding: 0;
     position: relative;
+}
+
+#bodyLogin {
+    background-image: radial-gradient(ellipse at center, var(--primary-color), rgb(37, 1, 1));
+}
+
+#alunoBody {
 }
 
 .centralize {
@@ -124,10 +130,6 @@ body {
 .login label {
     font-size: 1.3rem;
 }
-.login label:nth-child(1),
-.login label:nth-child(2) {
-    /* margin-left: -1rem; */
-}
 .login label:nth-child(1) i {
     margin-right: 0.1625rem;
 }
@@ -180,6 +182,7 @@ body {
     font-size: 1rem;
     color: #9d0b0b;
     margin: 0 0 1rem;
+    cursor: pointer;
 }
 .login:has(input[type="checkbox"]) label[for="remember"]::before {
     content: "✔";
