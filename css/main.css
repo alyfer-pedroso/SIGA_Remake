@@ -16,7 +16,7 @@ body {
 
 /*LOGIN*/
 
-#bodyLogin {
+#loginBody {
     background-image: radial-gradient(ellipse at center, var(--primary-color), rgb(37, 1, 1));
 }
 
