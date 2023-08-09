@@ -14,11 +14,10 @@ body {
     position: relative;
 }
 
+/*LOGIN*/
+
 #bodyLogin {
     background-image: radial-gradient(ellipse at center, var(--primary-color), rgb(37, 1, 1));
-}
-
-#alunoBody {
 }
 
 .centralize {
@@ -217,6 +216,190 @@ body {
 }
 .loginBTN:active {
     background-color: #860808;
+}
+
+/*ALUNO*/
+
+#alunoBody {
+    position: relative;
+    width: 100%;
+}
+
+.headerAluno {
+    background-color: #5f0000;
+    background-color: var(--primary-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 3;
+    border-bottom: 4px solid #5f0000;
+}
+.headerAluno img:first-child {
+    width: 75px;
+    height: 36px;
+    padding: 1.5rem 1rem 1.5rem;
+}
+.headerAluno img:last-child {
+    width: 41.25px;
+    height: 27px;
+    padding: 1.5rem 1rem 1.5rem;
+}
+
+.mainAluno {
+    height: 100%;
+    width: 100%;
+    background-color: #333;
+}
+.mainAluno-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ccc;
+    margin: 1rem;
+}
+
+.mainAluno__pefil {
+    margin-top: 5.2rem;
+    width: 100%;
+    height: 12rem;
+    background-color: #360101;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.pefil-container {
+    /* background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)); */
+    /* backdrop-filter: blur(10px); */
+    /* -webkit-backdrop-filter: blur(10px); */
+    /* border-radius: 0 0 10px 10px; */
+    /* border: 1px solid rgba(255, 255, 255, 0.18); */
+    border-top: none;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    width: 100%;
+    height: 100%;
+}
+.pefil__dados {
+    border-radius: 50%;
+    width: 6rem;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transform: scale(0.5);
+    margin-top: -0.5rem;
+}
+.pefil__dados img {
+    transform: scale(0.8);
+}
+
+.mainAluno__frequency {
+    /* padding: 3rem 1rem 0; */
+}
+.frequency__title {
+    margin: 3rem 1rem 1rem;
+}
+.frequency__container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+    overflow: scroll;
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+}
+.frequency__container::-webkit-scrollbar {
+    display: none;
+}
+.frequency__card {
+    background-color: #860808;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    min-width: 7rem;
+    min-height: 7rem;
+    max-width: 7rem;
+    max-height: 7rem;
+    padding: 0.5rem 0.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-family: inherit;
+    overflow: hidden;
+}
+.frequency__card i {
+    font-size: 1.5rem;
+    text-align: right;
+    width: 100%;
+}
+.frequency__card p {
+    color: white;
+    font-size: 1rem;
+    text-align: left;
+    margin-top: 1rem;
+}
+
+.mainAluno__optionsNav {
+}
+.optionsNav__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 11rem);
+    margin: 0 1rem;
+    gap: 1rem;
+}
+.optionsNav__card {
+    background-color: #ccc;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    text-align: left;
+    font-size: 1rem;
+    /* font-weight: bold; */
+    font-family: inherit;
+    position: relative;
+}
+.optionsNav__card div {
+    width: 100%;
+}
+.optionsNav__card i {
+    font-size: 2rem;
+}
+.optionsNav__card p {
+    color: #5f0000;
+}
+.optionsNav__card p + i {
+    font-size: 1rem;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+}
+.optionsNav__btnContainer {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+}
+.optionsNav__btn {
+    background-color: var(--primary-color);
+    color: white;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 1.2rem;
+    width: 90%;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+.optionsNav__btn:active {
+    color: var(--primary-color);
+    background-color: white;
 }
 
 @media screen and (min-width: 64rem) {
