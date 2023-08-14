@@ -518,6 +518,9 @@ select:hover {
         display: none;
     }
 
+    .mainAluno {
+        min-height: 100vh;
+    }
     .mainAluno__perfil {
         padding-top: 1rem;
     }
