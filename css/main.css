@@ -484,10 +484,6 @@ body {
     font-size: 0.8rem;
     font-weight: lighter;
 }
-.footerAluno__btn:first-child {
-    background-color: var(--primary-color);
-    background-color: #860808;
-}
 .footerAluno__btn:first-child p {
     font-weight: bold;
 }
@@ -496,10 +492,39 @@ body {
     background-color: #860808;
     font-weight: bold;
 }
+.markedBTN {
+    background-color: var(--primary-color);
+    background-color: #860808;
+}
 
 @media screen and (min-width: 64rem) {
     .login {
         gap: 0rem;
+    }
+
+    #alunoBody {
+        position: relative;
+        width: 100vw;
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    .mainAluno__pefil {
+        padding: 0 5rem;
+    }
+
+    .mainAluno__frequency {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .mainAluno__optionsNav {
+        padding: 0 5rem;
+    }
+    .mainAluno__optionsNav .mainAluno-title {
+        text-align: center;
     }
 }
 
