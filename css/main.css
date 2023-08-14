@@ -225,6 +225,11 @@ body {
     width: 100%;
 }
 
+#alunoBody button:hover,
+select:hover {
+    cursor: pointer;
+}
+
 .headerAluno {
     background-color: #860808;
     background-color: var(--primary-color);
@@ -264,7 +269,7 @@ body {
     margin: 1rem;
 }
 
-.mainAluno__pefil {
+.mainAluno__perfil {
     margin-top: 5.4rem;
     width: 100%;
     height: 12rem;
@@ -273,7 +278,7 @@ body {
     background-size: cover;
     border-radius: 0 0 5px 5px;
 }
-.pefil-container {
+.perfil-container {
     border-top: none;
     border-radius: 0 0 5px 5px;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.181);
@@ -477,15 +482,16 @@ body {
     gap: 0.5rem;
     font-family: inherit;
 }
+.footerAluno__btn:hover {
+    background-color: var(--primary-color);
+    background-color: #860808;
+}
 .footerAluno__btn i {
     font-size: 1.5rem;
 }
 .footerAluno__btn p {
     font-size: 0.8rem;
     font-weight: lighter;
-}
-.footerAluno__btn:first-child p {
-    font-weight: bold;
 }
 .footerAluno__btn:active {
     background-color: var(--primary-color);
@@ -495,6 +501,7 @@ body {
 .markedBTN {
     background-color: var(--primary-color);
     background-color: #860808;
+    font-weight: bold;
 }
 
 @media screen and (min-width: 64rem) {
@@ -511,8 +518,11 @@ body {
         display: none;
     }
 
-    .mainAluno__pefil {
-        padding: 0 5rem;
+    .mainAluno__perfil {
+        padding-top: 1rem;
+    }
+    .perfil-container {
+        align-items: center;
     }
 
     .mainAluno__frequency {
