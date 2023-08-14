@@ -1,6 +1,5 @@
-function User(first, last, email, phone, rm, ra, course) {
-    this.FIRSTNAME = first;
-    this.LASTNAME = last;
+function User(fullname, email, phone, rm, ra, course) {
+    this.FULLNAME = fullname;
     this.EMAIL = email;
     this.PHONE = phone;
     this.RM = rm;
