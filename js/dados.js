@@ -27,11 +27,11 @@ createProfileImage = (source)=> {
     return image;
 }
 
-const alyferPicture = createImageBitmap(alyfer3x4);
-const emilyPicture = createImageBitmap(emily3x4);
-const erickPicture = createImageBitmap(erick3x4);
-const samuelPicture = createImageBitmap(samuel3x4);
-const pietraPicture = createImageBitmap(pietra3x4);
+const alyferPicture = createProfileImage(alyfer3x4);
+const emilyPicture = createProfileImage(emily3x4);
+const erickPicture = createProfileImage(erick3x4);
+const samuelPicture = createProfileImage(samuel3x4);
+const pietraPicture = createProfileImage(pietra3x4);
 
 const alyfer = new User({
     fullname: "Alyfer Leandro de Araujo Pedroso",
