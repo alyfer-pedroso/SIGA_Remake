@@ -1,5 +1,7 @@
 const courses = {
-    ADM: "ETIM-Administração",
+    ADM: "MTEC-PI-Administração",
+    ADM_OLD: "ETIM-Administração",
+    MODA: "MTEC-PI-Modelagem",
 }
 const alyfer3x4 = "../imgs/perfil/alyfer3x4.jpeg";
 const emily3x4 = "../imgs/perfil/emily3x4.jpeg";
@@ -37,7 +39,7 @@ const alyfer = new User({
     phone: "15996414866",
     rm: "20212480114",
     ra: "000105954137-3/SP",
-    course: courses.ADM,
+    course: courses.ADM_OLD,
     profileIMG: alyferPicture
 })
 
@@ -47,7 +49,7 @@ const emily = new User({
     phone: "15996259887",
     rm: "20212480080",
     ra: "000105072580-3/SP",
-    course: courses.ADM,
+    course: courses.ADM_OLD,
     profileIMG: emilyPicture
 })
 
@@ -57,7 +59,7 @@ const erick = new User({
     phone: "15996947314",
     rm: "20212480044",
     ra: "000106727048-6/SP",
-    course: courses.ADM,
+    course: courses.ADM_OLD,
     profileIMG: erickPicture
 })
 
@@ -67,7 +69,7 @@ const samuel = new User({
     phone: "11997717108",
     rm: "20212480132",
     ra: "000108565771-1/SP",
-    course: courses.ADM,
+    course: courses.ADM_OLD,
     profileIMG: samuelPicture
 })
 
@@ -77,6 +79,6 @@ const pietra = new User({
     phone: "15991317691",
     rm: "20212480069",
     ra: "000105960617-3/SP",
-    course: courses.ADM,
+    course: courses.ADM_OLD,
     profileIMG: pietraPicture
 })
