@@ -1,71 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SIGA REMAKE</title>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SIGA REMAKE</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=REM:wght@100;300;400;600&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@300;400;600&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=REM:wght@100;300;400;600&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@300;400;600&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.css" />
+        <link rel="shortcut icon" href="imgs/favicon/favicon-32x32.png" type="image/x-icon" />
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/main.css" />
+    </head>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.css" />
-    <link rel="shortcut icon" href="imgs/favicon/favicon-32x32.png" type="image/x-icon" />
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/main.css" />
-</head>
-
-<body id="loginBody">
-    <div class="contentWarning">
-        <img src="imgs/cps/logo_cps_versao_br.png" alt="" />
-        <div class="contentWarning__display">
-            <p>Selecione abaixo o modo de como deseja entrar</p>
-            <select name="type" id="selecType">
-                <option value="null">Selecione uma opção</option>
-                <option value="student">Aluno</option>
-                <option value="teacher">Professor</option>
-                <option value="school">Escola</option>
-                <option value="responsible">Responsável</option>
-            </select>
-            <input type="submit" value="Entrar" class="btnConfirm" />
-        </div>
-    </div>
-
-    <div class="loading">
-        <img src="imgs/cps/logo_cps_versao_br.png" alt="" />
-        <div class="loading-loader"></div>
-    </div>
-
-    <div class="login">
-        <img src="imgs/cps/logo_cps_versao_br.png" alt="" />
-        <form action="aluno.html">
-            <label>
-                <i class="fa-solid fa-user" style="color: #9d0b0b"></i>
-                <input type="text" name="user" id="user" placeholder="Usuário" autocomplete="off" required />
-            </label>
-            <label>
-                <i class="fa-solid fa-key" style="color: #9d0b0b"></i>
-                <input type="password" name="pass" id="pass" placeholder="Senha" autocomplete="off" required />
-            </label>
-            <label for="remember">Lembrar de min<input type="checkbox" name="remember" id="remember" /></label>
-            <label>
-                <i class="fa-solid fa-school" style="color: #9d0b0b"></i>
-                <select name="unit" id="unit">
-                    <option value="null">Selecione sua unidade</option>
-                    <option value="248">ETEC de Cerquilho</option>
+    <body id="loginBody">
+        <div class="contentWarning">
+            <img src="imgs/cps/logo_cps_versao_br.png" alt="" />
+            <div class="contentWarning__display">
+                <p>Selecione abaixo o modo de como deseja entrar</p>
+                <select name="type" id="selecType">
+                    <option value="null">Selecione uma opção</option>
+                    <option value="student">Aluno</option>
+                    <option value="teacher">Professor</option>
+                    <option value="school">Escola</option>
+                    <option value="responsible">Responsável</option>
                 </select>
-            </label>
-            <input type="submit" value="Entrar" class="loginBTN" />
-        </form>
-    </div>
+                <input type="submit" value="Entrar" class="btnConfirm" />
+            </div>
+        </div>
 
-    <script src="js/dados.js"></script>
-    <script src="js/login.js"></script>
-    <script src="js/main.js"></script>
-</body>
+        <div class="loading">
+            <img src="imgs/cps/logo_cps_versao_br.png" alt="" />
+            <div class="loading-loader"></div>
+        </div>
 
+        <div class="login">
+            <img src="imgs/cps/logo_cps_versao_br.png" alt="" />
+            <form action="" id="loginForm">
+                <label>
+                    <i class="fa-solid fa-user" style="color: #9d0b0b"></i>
+                    <input type="text" name="user" id="user" placeholder="Usuário" autocomplete="off" required />
+                </label>
+                <label>
+                    <i class="fa-solid fa-key" style="color: #9d0b0b"></i>
+                    <input type="password" name="pass" id="pass" placeholder="Senha" autocomplete="off" required />
+                </label>
+                <label for="remember">Lembrar de min<input type="checkbox" name="remember" id="remember" /></label>
+                <label>
+                    <i class="fa-solid fa-school" style="color: #9d0b0b"></i>
+                    <select name="unit" id="unit">
+                        <option value="null">Selecione sua unidade</option>
+                        <option value="248">ETEC de Cerquilho</option>
+                    </select>
+                </label>
+                <input type="submit" value="Entrar" class="loginBTN" />
+            </form>
+        </div>
+
+        <script src="js/loginPerfil.js"></script>
+        <script src="js/loadingInLogin.js"></script>
+        <script src="js/main.js"></script>
+    </body>
 </html>

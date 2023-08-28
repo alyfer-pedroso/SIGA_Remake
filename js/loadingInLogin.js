@@ -4,14 +4,11 @@
     const $login = document.querySelector(".login");
     const $confirmBTN = document.querySelector(".btnConfirm");
     const $schoolLabel = document.querySelector(".login label:nth-child(4)");
-    const $userInput = document.getElementById("user");
-    const $passInput = document.getElementById("pass");
 
     const $selecType = document.getElementById("selecType");
 
     let changeToLoading = () => {
         let $selecTypeValue = $selecType.value;
-        console.log($selecTypeValue);
 
         if ($selecTypeValue == "null") {
             alert("Por favor, selecione uma opção ");
