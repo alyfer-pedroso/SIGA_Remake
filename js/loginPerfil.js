@@ -194,6 +194,7 @@ if ($loginDisplay) {
             default: {
                 alert("Usuario não encontrado!");
                 $user.value = "";
+                $pass.value = "";
                 break;
             }
         }
