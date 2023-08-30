@@ -4,6 +4,7 @@ const courses = {
     ADM_OLD: "ETIM-Administração",
     MODA: "MTEC-PI-Modelagem",
 };
+
 const alyfer3x4 = "../imgs/perfil/alyfer3x4.jpeg";
 const emily3x4 = "../imgs/perfil/emily3x4.jpeg";
 const erick3x4 = "../imgs/perfil/erick3x4.jpeg";
@@ -84,7 +85,6 @@ const $alunoDisplay = document.getElementById("alunoBody");
 
 if ($loginDisplay) {
     const $form = document.getElementById("loginForm");
-    const $loginBTN = document.querySelector(".loginBTN");
     let $checkRemember = document.getElementById("remember");
     let $user = document.getElementById("user");
     let $pass = document.getElementById("pass");
@@ -202,6 +202,7 @@ if ($loginDisplay) {
     $form.addEventListener("submit", areUser);
 }
 
+// Verificando qual usuário foi logado
 const whichUser = setInterval(() => {
     if ($alunoDisplay) {
         let $perfilIMG = document.querySelector(".dados__img img");
