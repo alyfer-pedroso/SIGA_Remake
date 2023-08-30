@@ -11,31 +11,19 @@ const samuel3x4 = "../imgs/perfil/samuel3x4.jpeg";
 const pietra3x4 = "../imgs/perfil/pietra3x4.jpeg";
 
 class User {
-    constructor(fullname, email, phone, rm, ra, pass, course, profileIMG) {
-        this.fullname;
-        this.email;
-        this.phone;
-        this.rm;
-        this.ra;
-        this.pass;
-        this.course;
-        this.profileIMG;
+    constructor({ fullname, email, phone, rm, ra, pass, course, profileIMG }) {
+        this.fullname = fullname;
+        this.email = email;
+        this.phone = phone;
+        this.rm = rm;
+        this.ra = ra;
+        this.pass = pass;
+        this.course = course;
+        this.profileIMG = profileIMG;
     }
 }
 
-createProfileImage = (source) => {
-    image = new Image();
-    image.src = source;
-    return image;
-};
-
-const alyferPicture = createProfileImage(alyfer3x4);
-const emilyPicture = createProfileImage(emily3x4);
-const erickPicture = createProfileImage(erick3x4);
-const samuelPicture = createProfileImage(samuel3x4);
-const pietraPicture = createProfileImage(pietra3x4);
-
-const alyfer = new User({
+let alyfer = new User({
     fullname: "Alyfer Leandro de Araujo Pedroso",
     email: "alyfer.pedroso@etec.sp.gov.br",
     phone: "15996414866",
@@ -43,10 +31,10 @@ const alyfer = new User({
     ra: "000105954137-3/SP",
     pass: "123",
     course: courses.ADM_OLD,
-    profileIMG: alyferPicture,
+    profileIMG: alyfer3x4,
 });
 
-const emily = new User({
+let emily = new User({
     fullname: "Emily Glinkovski",
     email: "emily.glinkovski@etec.sp.gov.br",
     phone: "15996259887",
@@ -54,10 +42,10 @@ const emily = new User({
     ra: "000105072580-3/SP",
     pass: "123",
     course: courses.ADM_OLD,
-    profileIMG: emilyPicture,
+    profileIMG: emily3x4,
 });
 
-const erick = new User({
+let erick = new User({
     fullname: "Erick Lopez de Queiroz",
     email: "erick.queiroz2@etec.sp.gov.br",
     phone: "15996947314",
@@ -65,10 +53,10 @@ const erick = new User({
     ra: "000106727048-6/SP",
     pass: "123",
     course: courses.ADM_OLD,
-    profileIMG: erickPicture,
+    profileIMG: erick3x4,
 });
 
-const samuel = new User({
+let samuel = new User({
     fullname: "Samuel Antonio Paes Proença",
     email: "samuel.proenca3@etec.sp.gov.br",
     phone: "11997717108",
@@ -76,10 +64,10 @@ const samuel = new User({
     ra: "000108565771-1/SP",
     pass: "123",
     course: courses.ADM_OLD,
-    profileIMG: samuelPicture,
+    profileIMG: samuel3x4,
 });
 
-const pietra = new User({
+let pietra = new User({
     fullname: "Pietra Rosa Baião",
     email: "pietra.baiao@etec.sp.gov.br",
     phone: "15991317691",
@@ -87,25 +75,192 @@ const pietra = new User({
     ra: "000105960617-3/SP",
     pass: "123",
     course: courses.ADM_OLD,
-    profileIMG: pietraPicture,
+    profileIMG: pietra3x4,
 });
 
 //Verificando para login
-const $login = document.querySelector(".login");
+const $loginDisplay = document.getElementById("loginBody");
+const $alunoDisplay = document.getElementById("alunoBody");
 
-if ($login) {
+if ($loginDisplay) {
     const $form = document.getElementById("loginForm");
-    const $submitBTN = document.querySelector(".loginBTN");
+    const $loginBTN = document.querySelector(".loginBTN");
+    let $checkRemember = document.getElementById("remember");
+    let $user = document.getElementById("user");
+    let $pass = document.getElementById("pass");
 
-    $form.addEventListener("submit", (e) => {
+    if (localStorage.remember == "true") {
+        open("../aluno.html", "_self");
+    }
+
+    function areUser(e) {
         e.preventDefault();
+        switch ($user.value) {
+            case alyfer.rm: {
+                if ($pass.value === alyfer.pass) {
+                    if (localStorage.user) {
+                        localStorage.clear();
+                    }
+                    localStorage.setItem("User", "alyfer");
+                    if ($checkRemember.checked == true) {
+                        localStorage.setItem("remember", "true");
+                    } else {
+                        localStorage.setItem("remember", "false");
+                    }
+                    open("../aluno.html", "_self");
+                } else {
+                    alert("Senha incorreta!");
+                    $pass.value = "";
+                }
+                break;
+            }
 
-        let $user = document.getElementById("user");
-        let $pass = document.getElementById("pass");
+            case emily.rm: {
+                if ($pass.value === emily.pass) {
+                    if (localStorage.user) {
+                        localStorage.clear();
+                    }
+                    localStorage.setItem("User", "emily");
+                    if ($checkRemember.checked == true) {
+                        localStorage.setItem("remember", "true");
+                    } else {
+                        localStorage.setItem("remember", "false");
+                    }
+                    open("../aluno.html", "_self");
+                } else {
+                    alert("Senha incorreta!");
+                    $pass.value = "";
+                }
+                break;
+            }
 
-        if ($user.value == "1") {
-            console.log(alyfer.rm);
-            // open("../aluno.html");
+            case erick.rm: {
+                if ($pass.value === erick.pass) {
+                    if (localStorage.user) {
+                        localStorage.clear();
+                    }
+                    localStorage.setItem("User", "erick");
+                    if ($checkRemember.checked == true) {
+                        localStorage.setItem("remember", "true");
+                    } else {
+                        localStorage.setItem("remember", "false");
+                    }
+                    open("../aluno.html", "_self");
+                } else {
+                    alert("Senha incorreta!");
+                    $pass.value = "";
+                }
+                break;
+            }
+
+            case samuel.rm: {
+                if ($pass.value === samuel.pass) {
+                    if (localStorage.user) {
+                        localStorage.clear();
+                    }
+                    localStorage.setItem("User", "samuel");
+                    if ($checkRemember.checked == true) {
+                        localStorage.setItem("remember", "true");
+                    } else {
+                        localStorage.setItem("remember", "false");
+                    }
+                    open("../aluno.html", "_self");
+                } else {
+                    alert("Senha incorreta!");
+                    $pass.value = "";
+                }
+                break;
+            }
+
+            case pietra.rm: {
+                if ($pass.value === pietra.pass) {
+                    if (localStorage.user) {
+                        localStorage.clear();
+                    }
+                    localStorage.setItem("User", "pietra");
+                    if ($checkRemember.checked == true) {
+                        localStorage.setItem("remember", "true");
+                    } else {
+                        localStorage.setItem("remember", "false");
+                    }
+                    open("../aluno.html", "_self");
+                } else {
+                    alert("Senha incorreta!");
+                    $pass.value = "";
+                }
+                break;
+            }
+
+            default: {
+                alert("Usuario não encontrado!");
+                $user.value = "";
+                break;
+            }
         }
-    });
+    }
+
+    $form.addEventListener("submit", areUser);
 }
+
+const whichUser = setInterval(() => {
+    if ($alunoDisplay) {
+        let $perfilIMG = document.querySelector(".dados__img img");
+        let $perfilNAME = document.querySelector(".dados__p #fullname");
+        let $perfilRM = document.querySelector(".dados__p #rm");
+        let $perfilRA = document.querySelector(".dados__p #ra");
+
+        switch (localStorage.getItem("User")) {
+            case "alyfer": {
+                $perfilIMG.src = alyfer.profileIMG;
+                $perfilNAME.innerHTML = alyfer.fullname;
+                $perfilRM.innerHTML = alyfer.rm;
+                $perfilRA.innerHTML = alyfer.ra;
+                clearInterval(whichUser);
+                break;
+            }
+
+            case "emily": {
+                $perfilIMG.src = emily.profileIMG;
+                $perfilNAME.innerHTML = emily.fullname;
+                $perfilRM.innerHTML = emily.rm;
+                $perfilRA.innerHTML = emily.ra;
+                clearInterval(whichUser);
+                break;
+            }
+
+            case "erick": {
+                $perfilIMG.src = erick.profileIMG;
+                $perfilNAME.innerHTML = erick.fullname;
+                $perfilRM.innerHTML = erick.rm;
+                $perfilRA.innerHTML = erick.ra;
+                clearInterval(whichUser);
+                break;
+            }
+
+            case "samuel": {
+                $perfilIMG.src = samuel.profileIMG;
+                $perfilNAME.innerHTML = samuel.fullname;
+                $perfilRM.innerHTML = samuel.rm;
+                $perfilRA.innerHTML = samuel.ra;
+                clearInterval(whichUser);
+                break;
+            }
+
+            case "pietra": {
+                $perfilIMG.src = pietra.profileIMG;
+                $perfilNAME.innerHTML = pietra.fullname;
+                $perfilRM.innerHTML = pietra.rm;
+                $perfilRA.innerHTML = pietra.ra;
+                clearInterval(whichUser);
+                break;
+            }
+
+            default: {
+                localStorage.clear();
+                open("../index.html", "_self");
+            }
+        }
+    } else {
+        return;
+    }
+});
