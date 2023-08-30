@@ -107,7 +107,7 @@ if ($loginDisplay) {
                     } else {
                         localStorage.setItem("remember", "false");
                     }
-                    open("../SIGA_Remake/aluno.html", "_self");
+                    open("../aluno.html", "_self");
                 } else {
                     alert("Senha incorreta!");
                     $pass.value = "";
@@ -126,7 +126,7 @@ if ($loginDisplay) {
                     } else {
                         localStorage.setItem("remember", "false");
                     }
-                    open("../SIGA_Remake/aluno.html", "_self");
+                    open("../aluno.html", "_self");
                 } else {
                     alert("Senha incorreta!");
                     $pass.value = "";
@@ -145,7 +145,7 @@ if ($loginDisplay) {
                     } else {
                         localStorage.setItem("remember", "false");
                     }
-                    open("../SIGA_Remake/aluno.html", "_self");
+                    open("../aluno.html", "_self");
                 } else {
                     alert("Senha incorreta!");
                     $pass.value = "";
@@ -164,7 +164,7 @@ if ($loginDisplay) {
                     } else {
                         localStorage.setItem("remember", "false");
                     }
-                    open("../SIGA_Remake/aluno.html", "_self");
+                    open("../aluno.html", "_self");
                 } else {
                     alert("Senha incorreta!");
                     $pass.value = "";
@@ -183,7 +183,7 @@ if ($loginDisplay) {
                     } else {
                         localStorage.setItem("remember", "false");
                     }
-                    open("../SIGA_Remake/aluno.html", "_self");
+                    open("../aluno.html", "_self");
                 } else {
                     alert("Senha incorreta!");
                     $pass.value = "";
@@ -259,7 +259,7 @@ const whichUser = setInterval(() => {
 
             default: {
                 localStorage.clear();
-                open("../SIGA_Remake/index.html", "_self");
+                open("../index.html", "_self");
             }
         }
     } else {
