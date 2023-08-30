@@ -230,6 +230,57 @@ select:hover {
     cursor: pointer;
 }
 
+.aluno-hamburguerMenu {
+    position: fixed;
+    z-index: 4;
+    background-color: #202020;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    transition: transform 0.5s ease;
+    transform: translateX(100vw);
+}
+.hamburguerMenu-container {
+    margin-top: 5.4rem;
+    display: flex;
+    flex-direction: column;
+}
+.hamburguerMenu-container h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ccc;
+    margin: 2rem 1rem;
+}
+.hamburguerMenu-button {
+    background-color: #151515;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: lighter;
+    padding: 1rem;
+    margin: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.hamburguerMenu-button i {
+    font-size: 2rem;
+}
+.hamburguerMenu-button:active {
+    font-weight: bold;
+    background-color: #ccc;
+    color: #151515;
+}
+.hamburguerMenu-button:last-child {
+    /* width: 20%;
+    justify-content: center;
+    align-self: flex-end;
+    justify-self: flex-end; */
+}
+.opened {
+    transform: translateX(0);
+}
+
 .headerAluno {
     background-color: #860808;
     background-color: var(--primary-color);
@@ -240,7 +291,7 @@ select:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 3;
+    z-index: 5;
     border-bottom: 4px solid var(--primary-color);
     /* border-radius: 0 0 10px 10px; */
 }
@@ -460,7 +511,7 @@ select:hover {
     bottom: -1px;
     left: 0;
     width: 100%;
-    z-index: 3;
+    z-index: 5;
     background-color: #252525;
     height: 5rem;
 }
@@ -481,10 +532,6 @@ select:hover {
     justify-content: center;
     gap: 0.5rem;
     font-family: inherit;
-}
-.footerAluno__btn:hover {
-    background-color: var(--primary-color);
-    background-color: #860808;
 }
 .footerAluno__btn i {
     font-size: 1.5rem;
@@ -518,6 +565,16 @@ select:hover {
         display: none;
     }
 
+    .aluno-hamburguerMenu {
+        width: 30%;
+    }
+    .hamburguerMenu-button:hover {
+        font-weight: bold;
+        background-color: #ccc;
+        color: #151515;
+        cursor: pointer;
+    }
+
     .mainAluno {
         min-height: 100vh;
     }
@@ -538,6 +595,11 @@ select:hover {
     }
     .mainAluno__optionsNav .mainAluno-title {
         text-align: center;
+    }
+
+    .footerAluno__btn:hover {
+        background-color: var(--primary-color);
+        background-color: #860808;
     }
 }
 
