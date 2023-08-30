@@ -5,6 +5,11 @@
     const $hamburguerMenu = document.querySelector(".aluno-hamburguerMenu");
     const exitButton = document.getElementById("exit");
 
+    $mainAluno.addEventListener("click", () => {
+        $hamburguerMenu.classList.remove("opened");
+        $mainAluno.classList.remove("MENU");
+        $mainAluno.classList.add("HOME");
+    });
     footerButtons[0].addEventListener("click", () => {
         $hamburguerMenu.classList.remove("opened");
         $mainAluno.classList.remove("MENU");
