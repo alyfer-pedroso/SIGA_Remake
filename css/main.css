@@ -230,6 +230,19 @@ select:hover {
     cursor: pointer;
 }
 
+.lAluno-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.lAluno {
+    position: fixed;
+    z-index: 10;
+    left: 40vw;
+    top: 40vh;
+    transition: opacity 0.75s ease, visibility 0.75s;
+}
+
 .aluno-hamburguerMenu {
     position: fixed;
     z-index: 4;
@@ -563,6 +576,10 @@ select:hover {
 
     ::-webkit-scrollbar {
         display: none;
+    }
+
+    .lAluno {
+        left: 48vw;
     }
 
     .aluno-hamburguerMenu {

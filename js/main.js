@@ -5,6 +5,14 @@
     const $hamburguerMenu = document.querySelector(".aluno-hamburguerMenu");
     const exitButton = document.getElementById("exit");
 
+    window.addEventListener("load", () => {
+        const loader = document.querySelector(".loading-loader");
+        loader.classList.add("lAluno-hidden");
+        loader.addEventListener("transitionend", () => {
+            loader.remove();
+        });
+    });
+
     $mainAluno.addEventListener("click", () => {
         $hamburguerMenu.classList.remove("opened");
         $mainAluno.classList.remove("MENU");
