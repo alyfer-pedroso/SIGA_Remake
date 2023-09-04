@@ -11,6 +11,9 @@ const erick3x4 = "../imgs/perfil/erick3x4.jpeg";
 const samuel3x4 = "../imgs/perfil/samuel3x4.jpeg";
 const pietra3x4 = "../imgs/perfil/pietra3x4.jpeg";
 
+// Usuarios fora do tcc
+const luis_henrique3x4 = "../imgs/perfil/luishenrique3x4.jpeg";
+
 class User {
     constructor({ fullname, email, phone, rm, ra, pass, course, profileIMG }) {
         this.fullname = fullname;
@@ -24,6 +27,7 @@ class User {
     }
 }
 
+// Usuarios do TCC
 let alyfer = new User({
     fullname: "Alyfer Leandro de Araujo Pedroso",
     email: "alyfer.pedroso@etec.sp.gov.br",
@@ -79,6 +83,18 @@ let pietra = new User({
     profileIMG: pietra3x4,
 });
 
+// Usuarios fora do TCC
+let luis_henrique = new User({
+    fullname: "Luis Henrique Santos de Jesus",
+    email: "luis.jesus18@etec.sp.gov.br",
+    phone: "15988070641",
+    rm: "20212480140",
+    ra: "000106996518-2/SP",
+    pass: "157155",
+    course: courses.ADM_OLD,
+    profileIMG: luis_henrique3x4,
+});
+
 //Verificando para login
 const $loginDisplay = document.getElementById("loginBody");
 const $alunoDisplay = document.getElementById("alunoBody");
@@ -96,6 +112,7 @@ if ($loginDisplay) {
     function areUser(e) {
         e.preventDefault();
         switch ($user.value) {
+            // Usuarios do TCC
             case alyfer.rm: {
                 if ($pass.value === alyfer.pass) {
                     if (localStorage.user) {
@@ -191,6 +208,26 @@ if ($loginDisplay) {
                 break;
             }
 
+            // Usuarios fora do TCC
+            case luis_henrique.rm: {
+                if ($pass.value === luis_henrique.pass) {
+                    if (localStorage.user) {
+                        localStorage.clear();
+                    }
+                    localStorage.setItem("User", "luis_henrique");
+                    if ($checkRemember.checked == true) {
+                        localStorage.setItem("remember", "true");
+                    } else {
+                        localStorage.setItem("remember", "false");
+                    }
+                    open("../aluno.html", "_self");
+                } else {
+                    alert("Senha incorreta!");
+                    $pass.value = "";
+                }
+                break;
+            }
+
             default: {
                 alert("Usuario não encontrado!");
                 $user.value = "";
@@ -211,6 +248,7 @@ const whichUser = setInterval(() => {
         let $perfilRM = document.querySelector(".dados__p #rm");
         let $perfilRA = document.querySelector(".dados__p #ra");
 
+        // Usuarios do TCC
         switch (localStorage.getItem("User")) {
             case "alyfer": {
                 $perfilIMG.src = alyfer.profileIMG;
@@ -253,6 +291,16 @@ const whichUser = setInterval(() => {
                 $perfilNAME.innerHTML = pietra.fullname;
                 $perfilRM.innerHTML = pietra.rm;
                 $perfilRA.innerHTML = pietra.ra;
+                clearInterval(whichUser);
+                break;
+            }
+
+            // Usuarios do fora do TCC
+            case "luis_henrique": {
+                $perfilIMG.src = luis_henrique.profileIMG;
+                $perfilNAME.innerHTML = luis_henrique.fullname;
+                $perfilRM.innerHTML = luis_henrique.rm;
+                $perfilRA.innerHTML = luis_henrique.ra;
                 clearInterval(whichUser);
                 break;
             }
