@@ -473,6 +473,9 @@ select:hover {
     margin: 0 1rem;
     gap: 1rem;
 }
+.optionsNav__container-allOpt {
+    grid-template-rows: repeat(7, 11rem);
+}
 .optionsNav__card {
     background-color: #ccc;
     border: none;
@@ -572,6 +575,80 @@ select:hover {
 
 .mainAluno__allOtp .mainAluno__optionsNav .mainAluno-title {
     margin-top: 3rem;
+}
+
+.mainAluno__vidaAcad-dadosGerais {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1rem;
+    margin: 0 1rem 1rem;
+    padding-top: 1rem;
+    background-color: #360101;
+}
+.mainAluno-secTitle {
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ccc;
+}
+.dadosGerais {
+    color: white;
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+}
+.dadosGerais p {
+    font-size: 1rem;
+    font-weight: lighter;
+    margin: 1rem;
+    text-align: center;
+}
+.dadosGerais p b {
+    font-weight: bold;
+}
+
+.componenteCurricular__2021 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.componenteCurricular__materia {
+    display: flex;
+    width: 100%;
+}
+.componenteCurricular__materia div {
+    overflow-x: scroll;
+    white-space: nowrap;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    padding: 1rem;
+    width: 100%;
+    background-color: #860808;
+    color: white;
+    border: 2px solid black;
+    border-bottom: 1px solid black;
+    margin: 0 1rem;
+}
+.componenteCurricular__materia div p b {
+    font-weight: bold;
+}
+.componenteCurricular__materia div p b:first-child {
+    border-right: 2px solid black;
+    padding-right: 1rem;
+    text-transform: uppercase;
+}
+.componenteCurricular__materia div p span b:first-child {
+    border-right: none;
+    padding: none;
+}
+.componenteCurricular__materia div p span {
+    padding: 0 1rem;
+}
+.componenteCurricular__materia div p span:not(:last-child) {
+    border-right: 2px solid black;
 }
 
 @media screen and (min-width: 64rem) {

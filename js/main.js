@@ -1,14 +1,30 @@
 (() => {
+    // DISPLAY
     const body = document.querySelector("body");
     const $mainAluno = document.querySelector(".mainAluno");
-    const $mainAluno__home = document.getElementById("mainAluno__home");
-    const $mainAluno__allOtp = document.getElementById("mainAluno__allOtp");
+    const $mainAluno__displays = document.querySelectorAll(".display");
 
     // BTNS
     const footerButtons = document.querySelectorAll(".footerAluno button");
     const $hamburguerMenu = document.querySelector(".aluno-hamburguerMenu");
     const exitButton = document.getElementById("exit");
     const allOptBtn = document.querySelector(".optionsNav__btn");
+
+    // OPT BTNS
+    const $btn__vidaAcad = document.querySelectorAll(".OPT-VIDAACAD");
+    const $btn__boletimES = document.querySelectorAll(".OPT-BOESC");
+    const $btn__fichaInd = document.querySelectorAll(".OPT-FICHAIND");
+    const $btn__fichaDes = document.querySelectorAll(".OPT-FICHADES");
+    const $btn__progPar = document.querySelectorAll(".OPT-PROGPAR");
+    const $btn__horarioCur = document.querySelectorAll(".OPT-HRCUR");
+    const $btn__solicitDoc = document.querySelectorAll(".OPT-SOLIDOC");
+    const $btn__aprovEs = document.querySelectorAll(".OPT-APROV");
+    const $btn__emailIns = document.querySelectorAll(".OPT-EMAILINS");
+    const $btn__rematric = document.querySelectorAll(".OPT-REMA");
+    const $btn__comprovVac = document.querySelectorAll(".OPT-COMVAC");
+    const $btn__reconsid = document.querySelectorAll(".OPT-RECO");
+    const $btn__reclass = document.querySelectorAll(".OPT-RECLA");
+    const $btn__attCad = document.querySelectorAll(".OPT-ATTC");
 
     let isNotMenu = false;
     let isHome = true;
@@ -26,8 +42,11 @@
         footerButtons.forEach((el) => {
             el.classList.remove("markedBTN");
         });
+        $mainAluno__displays.forEach((el) => {
+            el.style.display = "none";
+        });
+        $mainAluno__displays[0].style.display = "block";
         footerButtons[0].classList.add("markedBTN");
-        $mainAluno__allOtp.style.display = "none";
     }
 
     function loaderPage() {
@@ -44,13 +63,30 @@
 
     // Funções das páginas
     function initPage() {
+        scrollTo(0, 0);
         location.reload();
     }
 
     function accessAllOptions() {
-        $mainAluno__home.style.display = "none";
-        $mainAluno__allOtp.style.display = "block";
+        $mainAluno__displays.forEach((el) => {
+            el.style.display = "none";
+        });
+        $mainAluno__displays[1].style.display = "block";
         $hamburguerMenu.classList.remove("opened");
+        footerButtons.forEach((el) => {
+            el.classList.remove("markedBTN");
+        });
+        isNotMenu = !isNotMenu;
+        isHome = false;
+        loaderPage();
+        scrollTo(0, 0);
+    }
+
+    function accessVidaAcad() {
+        $mainAluno__displays.forEach((el) => {
+            el.style.display = "none";
+        });
+        $mainAluno__displays[2].style.display = "block";
         footerButtons.forEach((el) => {
             el.classList.remove("markedBTN");
         });
@@ -62,6 +98,9 @@
 
     // Adciocionando eventos nos botoes
     allOptBtn.addEventListener("click", accessAllOptions);
+    $btn__vidaAcad.forEach((el) => {
+        el.addEventListener("click", accessVidaAcad);
+    });
 
     footerButtons[0].addEventListener("click", () => {
         if (isNotMenu) {
@@ -69,7 +108,6 @@
             scrollTo(0, 0);
         } else {
             if ($hamburguerMenu.classList == "aluno-hamburguerMenu opened") {
-                footerButtons[0].classList.add("markedBTN");
                 footerButtons.forEach((el) => {
                     el.classList.remove("markedBTN");
                 });
