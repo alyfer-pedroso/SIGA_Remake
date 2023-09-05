@@ -477,7 +477,11 @@ select:hover {
     gap: 1rem;
 }
 .optionsNav__container-allOpt {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(7, 11rem);
+    margin: 0 1rem;
+    gap: 1rem;
 }
 .optionsNav__card {
     background-color: #ccc;
@@ -527,6 +531,10 @@ select:hover {
     outline: none;
 }
 .optionsNav__btn:active {
+    color: var(--primary-color);
+    background-color: white;
+}
+.optionsNav__btn:hover {
     color: var(--primary-color);
     background-color: white;
 }
@@ -758,6 +766,14 @@ select:hover {
     color: var(--primary-color);
     background-color: white;
 }
+
+[class*="OPT-"]:hover {
+    background-color: white;
+}
+[class*="frequency__card"]:hover {
+    background-color: #e40404;
+}
+
 @media screen and (min-width: 64rem) {
     .login {
         gap: 0rem;
@@ -809,11 +825,13 @@ select:hover {
     }
 
     .optionsNav__container {
-        display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 11rem);
-        margin: 0 1rem;
-        gap: 1rem;
+    }
+
+    .optionsNav__container-allOpt {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 11rem);
     }
 
     .footerAluno__btn:hover {

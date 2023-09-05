@@ -82,23 +82,31 @@
     }
 
     function accessAllOptions() {
-        goToPage();
-        $mainAluno__displays[1].style.display = "block";
+        setTimeout(() => {
+            goToPage();
+            $mainAluno__displays[1].style.display = "block";
+        }, 10);
     }
 
     function accessVidaAcad() {
-        goToPage();
-        $mainAluno__displays[2].style.display = "block";
+        setTimeout(() => {
+            goToPage();
+            $mainAluno__displays[2].style.display = "block";
+        }, 10);
     }
 
     function accessBoEsc() {
-        goToPage();
-        $mainAluno__displays[3].style.display = "block";
+        setTimeout(() => {
+            goToPage();
+            $mainAluno__displays[3].style.display = "block";
+        }, 10);
     }
 
     function accessFichaInd() {
-        goToPage();
-        $mainAluno__displays[4].style.display = "block";
+        setTimeout(() => {
+            goToPage();
+            $mainAluno__displays[4].style.display = "block";
+        }, 10);
     }
 
     // Adciocionando eventos nos botoes
