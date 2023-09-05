@@ -76,7 +76,7 @@
         footerButtons.forEach((el) => {
             el.classList.remove("markedBTN");
         });
-        isNotMenu = !isNotMenu;
+        isNotMenu = true;
         isHome = false;
         loaderPage();
         scrollTo(0, 0);
@@ -90,7 +90,7 @@
         footerButtons.forEach((el) => {
             el.classList.remove("markedBTN");
         });
-        isNotMenu = !isNotMenu;
+        isNotMenu = true;
         isHome = false;
         loaderPage();
         scrollTo(0, 0);

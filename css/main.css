@@ -224,7 +224,9 @@ body {
     position: relative;
     width: 100%;
 }
-
+#alunoBody::-webkit-scrollbar {
+    display: none;
+}
 #alunoBody button:hover,
 select:hover {
     cursor: pointer;
@@ -585,6 +587,7 @@ select:hover {
     margin: 0 1rem 1rem;
     padding-top: 1rem;
     background-color: #360101;
+    max-width: 1206px;
 }
 .mainAluno-secTitle {
     font-size: 1rem;
@@ -608,7 +611,7 @@ select:hover {
     font-weight: bold;
 }
 
-.componenteCurricular__2021 {
+.componenteCurricular {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -618,6 +621,9 @@ select:hover {
     display: flex;
     width: 100%;
 }
+.componenteCurricular__materia + h2 {
+    margin-top: 3rem;
+}
 .componenteCurricular__materia div {
     overflow-x: scroll;
     white-space: nowrap;
@@ -625,7 +631,7 @@ select:hover {
     justify-content: space-between;
     font-size: 1.2rem;
     padding: 1rem;
-    width: 100%;
+    max-width: 1206px;
     background-color: #860808;
     color: white;
     border: 2px solid black;
@@ -650,6 +656,13 @@ select:hover {
 .componenteCurricular__materia div p span:not(:last-child) {
     border-right: 2px solid black;
 }
+.componenteCurricular__materia div::-webkit-scrollbar {
+    background-color: #b20000;
+    height: 5px;
+}
+.componenteCurricular__materia div::-webkit-scrollbar-thumb {
+    background-color: #360101;
+}
 
 @media screen and (min-width: 64rem) {
     .login {
@@ -661,9 +674,9 @@ select:hover {
         width: 100vw;
     }
 
-    ::-webkit-scrollbar {
+    /* body::-webkit-scrollbar {
         display: none;
-    }
+    } */
 
     .lAluno {
         left: 48vw;
@@ -704,6 +717,14 @@ select:hover {
     .footerAluno__btn:hover {
         background-color: var(--primary-color);
         background-color: #860808;
+    }
+
+    .mainAluno__vidaAcad-dadosGerais {
+        margin: 0 auto;
+    }
+
+    .componenteCurricular__materia {
+        justify-content: center;
     }
 }
 
