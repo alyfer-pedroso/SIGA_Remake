@@ -591,7 +591,8 @@ select:hover {
 .mainAluno__vidaAcad-dadosGerais,
 .mainAluno__boEsc-filtro,
 .mainAluno__fichaInd-alert,
-.mainAluno__fichaDes-filtro {
+.mainAluno__fichaDes-filtro,
+.mainAluno__progPar-filtro {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -631,7 +632,8 @@ select:hover {
 }
 
 .componenteCurricular__materia,
-.fiadeTb {
+.fiadeTb,
+.progParTb {
     display: flex;
     width: 100%;
 }
@@ -639,7 +641,8 @@ select:hover {
     margin-top: 3rem;
 }
 .componenteCurricular__materia div,
-.fiadeTb div {
+.fiadeTb div,
+.progParTb div {
     overflow-x: scroll;
     white-space: nowrap;
     display: flex;
@@ -654,35 +657,42 @@ select:hover {
     margin: 0 1rem;
 }
 .componenteCurricular__materia div p b,
-.fiadeTb div p b {
+.fiadeTb div p b,
+.progParTb div p b {
     font-weight: bold;
 }
 .componenteCurricular__materia div p b:first-child,
-.fiadeTb div p b:first-child {
+.fiadeTb div p b:first-child,
+.progParTb div p b:first-child {
     border-right: 2px solid black;
     padding-right: 1rem;
     text-transform: uppercase;
 }
 .componenteCurricular__materia div p span b:first-child,
-.fiadeTb div p span b:first-child {
+.fiadeTb div p span b:first-child,
+.progParTb div p span b:first-child {
     border-right: none;
     padding: none;
 }
 .componenteCurricular__materia div p span,
-.fiadeTb div p span {
+.fiadeTb div p span,
+.progParTb div p span {
     padding: 0 1rem;
 }
 .componenteCurricular__materia div p span:not(:last-child),
-.fiadeTb div p span:not(:last-child) {
+.fiadeTb div p span:not(:last-child),
+.progParTb div p span:not(:last-child) {
     border-right: 2px solid black;
 }
 .componenteCurricular__materia div::-webkit-scrollbar,
-.fiadeTb div::-webkit-scrollbar {
+.fiadeTb div::-webkit-scrollbar,
+.progParTb div::-webkit-scrollbar {
     background-color: #b20000;
     height: 5px;
 }
 .componenteCurricular__materia div::-webkit-scrollbar-thumb,
-.fiadeTb div::-webkit-scrollbar-thumb {
+.fiadeTb div::-webkit-scrollbar-thumb,
+.progParTb div::-webkit-scrollbar-thumb {
     background-color: #360101;
 }
 
@@ -750,9 +760,39 @@ select:hover {
     text-align: left;
     width: auto;
 }
-.mainAluno__fichaDes-filtro div {
+
+.mainAluno__progPar-filtro {
+    margin: 3rem 0;
+}
+
+.mainAluno__fichaDes-filtro div,
+.mainAluno__progPar-filtro div {
     flex-direction: row;
     width: auto;
+}
+
+.mainAluno__progPar-filtro .filtro {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.mainAluno__progPar-filtro div {
+    margin: 0 0 0 0.5rem;
+    text-align: left;
+}
+.mainAluno__progPar-filtro div p {
+    font-size: 0.8rem;
+}
+.mainAluno__progPar-filtro div:first-of-type,
+.mainAluno__progPar-filtro div:last-of-type {
+    text-align: left;
+}
+.mainAluno__progPar-filtro div img {
+    width: 16px;
+    height: 16px;
 }
 
 .select {
@@ -868,6 +908,23 @@ select:hover {
     .mainAluno__boEsc-filtro,
     .mainAluno__fichaDes-filtro {
         margin: 0 auto;
+    }
+
+    .mainAluno__progPar-filtro {
+        margin: 3rem auto 4rem;
+    }
+
+    .mainAluno__progPar-filtro .filtro {
+        width: auto;
+        margin: 1rem auto;
+    }
+
+    .mainAluno__progPar-filtro .filtro div p {
+        font-size: 1rem;
+    }
+
+    .progParTb {
+        justify-content: center;
     }
 
     .mainAluno__fichaInd-alert {
