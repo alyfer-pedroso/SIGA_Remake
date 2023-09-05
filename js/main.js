@@ -67,39 +67,50 @@
         location.reload();
     }
 
-    function accessAllOptions() {
+    function goToPage() {
         $mainAluno__displays.forEach((el) => {
             el.style.display = "none";
         });
-        $mainAluno__displays[1].style.display = "block";
-        $hamburguerMenu.classList.remove("opened");
         footerButtons.forEach((el) => {
             el.classList.remove("markedBTN");
         });
+        $hamburguerMenu.classList.remove("opened");
         isNotMenu = true;
         isHome = false;
         loaderPage();
         scrollTo(0, 0);
     }
 
+    function accessAllOptions() {
+        goToPage();
+        $mainAluno__displays[1].style.display = "block";
+    }
+
     function accessVidaAcad() {
-        $mainAluno__displays.forEach((el) => {
-            el.style.display = "none";
-        });
+        goToPage();
         $mainAluno__displays[2].style.display = "block";
-        footerButtons.forEach((el) => {
-            el.classList.remove("markedBTN");
-        });
-        isNotMenu = true;
-        isHome = false;
-        loaderPage();
-        scrollTo(0, 0);
+    }
+
+    function accessBoEsc() {
+        goToPage();
+        $mainAluno__displays[3].style.display = "block";
+    }
+
+    function accessFichaInd() {
+        goToPage();
+        $mainAluno__displays[4].style.display = "block";
     }
 
     // Adciocionando eventos nos botoes
     allOptBtn.addEventListener("click", accessAllOptions);
     $btn__vidaAcad.forEach((el) => {
         el.addEventListener("click", accessVidaAcad);
+    });
+    $btn__boletimES.forEach((el) => {
+        el.addEventListener("click", accessBoEsc);
+    });
+    $btn__fichaInd.forEach((el) => {
+        el.addEventListener("click", accessFichaInd);
     });
 
     footerButtons[0].addEventListener("click", () => {
@@ -125,6 +136,7 @@
                 el.classList.remove("markedBTN");
             });
             footerButtons[1].classList.add("markedBTN");
+            body.style.overflow = "hidden";
         } else {
             footerButtons.forEach((el) => {
                 el.classList.remove("markedBTN");

@@ -322,7 +322,8 @@ select:hover {
 }
 
 .mainAluno {
-    height: 100%;
+    /* height: 100%; */
+    min-height: 100vh;
     width: 100%;
     background-color: #333;
     padding-bottom: 6rem;
@@ -579,7 +580,9 @@ select:hover {
     margin-top: 3rem;
 }
 
-.mainAluno__vidaAcad-dadosGerais {
+.mainAluno__vidaAcad-dadosGerais,
+.mainAluno__boEsc-filtro,
+.mainAluno__fichaInd-alert {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -595,7 +598,8 @@ select:hover {
     text-transform: uppercase;
     color: #ccc;
 }
-.dadosGerais {
+.dadosGerais,
+.filtro {
     color: white;
     padding-top: 1rem;
     display: flex;
@@ -617,14 +621,16 @@ select:hover {
     flex-direction: column;
 }
 
-.componenteCurricular__materia {
+.componenteCurricular__materia,
+.fiadeTb {
     display: flex;
     width: 100%;
 }
 .componenteCurricular__materia + h2 {
     margin-top: 3rem;
 }
-.componenteCurricular__materia div {
+.componenteCurricular__materia div,
+.fiadeTb div {
     overflow-x: scroll;
     white-space: nowrap;
     display: flex;
@@ -638,32 +644,120 @@ select:hover {
     border-bottom: 1px solid black;
     margin: 0 1rem;
 }
-.componenteCurricular__materia div p b {
+.componenteCurricular__materia div p b,
+.fiadeTb div p b {
     font-weight: bold;
 }
-.componenteCurricular__materia div p b:first-child {
+.componenteCurricular__materia div p b:first-child,
+.fiadeTb div p b:first-child {
     border-right: 2px solid black;
     padding-right: 1rem;
     text-transform: uppercase;
 }
-.componenteCurricular__materia div p span b:first-child {
+.componenteCurricular__materia div p span b:first-child,
+.fiadeTb div p span b:first-child {
     border-right: none;
     padding: none;
 }
-.componenteCurricular__materia div p span {
+.componenteCurricular__materia div p span,
+.fiadeTb div p span {
     padding: 0 1rem;
 }
-.componenteCurricular__materia div p span:not(:last-child) {
+.componenteCurricular__materia div p span:not(:last-child),
+.fiadeTb div p span:not(:last-child) {
     border-right: 2px solid black;
 }
-.componenteCurricular__materia div::-webkit-scrollbar {
+.componenteCurricular__materia div::-webkit-scrollbar,
+.fiadeTb div::-webkit-scrollbar {
     background-color: #b20000;
     height: 5px;
 }
-.componenteCurricular__materia div::-webkit-scrollbar-thumb {
+.componenteCurricular__materia div::-webkit-scrollbar-thumb,
+.fiadeTb div::-webkit-scrollbar-thumb {
     background-color: #360101;
 }
 
+.mainAluno__boEsc-filtro {
+    padding: 1rem;
+}
+
+.filtro {
+    width: 100%;
+    padding: 1rem;
+    justify-content: space-evenly;
+}
+
+.filtro div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 85px;
+    text-align: center;
+}
+.filtro div:first-of-type {
+    text-align: left;
+}
+.filtro div:last-of-type {
+    text-align: right;
+}
+.filtro div p {
+    font-size: 1rem;
+    font-weight: lighter;
+}
+.filtro div p b {
+    font-weight: bold;
+}
+
+.mainAluno__fichaInd-alert {
+    padding: 1rem;
+    color: white;
+    margin-top: 4rem;
+    font-weight: lighter;
+}
+
+.mainAluno__fichaInd-alert strong {
+    font-weight: bold;
+}
+
+.fiadeStatus {
+    margin: 2rem 1rem 1rem;
+    font-size: 1.2rem;
+    color: white;
+}
+.fiadeStatus b {
+    font-weight: bold;
+}
+
+.fiadeStatus select {
+    background-color: #222;
+    font-size: 1.2rem;
+}
+
+.select {
+    background-color: #360101;
+    border: none;
+    outline: none;
+    font-family: inherit;
+    font-weight: lighter;
+    color: white;
+    position: relative;
+}
+
+.BTN {
+    background-color: var(--primary-color);
+    color: white;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: bolder;
+    padding: 0.5rem 1.2rem;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+.BTN:active {
+    color: var(--primary-color);
+    background-color: white;
+}
 @media screen and (min-width: 64rem) {
     .login {
         gap: 0rem;
@@ -714,6 +808,14 @@ select:hover {
         text-align: center;
     }
 
+    .optionsNav__container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 11rem);
+        margin: 0 1rem;
+        gap: 1rem;
+    }
+
     .footerAluno__btn:hover {
         background-color: var(--primary-color);
         background-color: #860808;
@@ -725,6 +827,10 @@ select:hover {
 
     .componenteCurricular__materia {
         justify-content: center;
+    }
+
+    .mainAluno__fichaInd-alert {
+        margin: 4rem auto 0;
     }
 }
 
