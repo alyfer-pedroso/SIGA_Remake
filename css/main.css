@@ -590,7 +590,8 @@ select:hover {
 
 .mainAluno__vidaAcad-dadosGerais,
 .mainAluno__boEsc-filtro,
-.mainAluno__fichaInd-alert {
+.mainAluno__fichaInd-alert,
+.mainAluno__fichaDes-filtro {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -741,6 +742,19 @@ select:hover {
     font-size: 1.2rem;
 }
 
+.mainAluno__fichaDes-filtro {
+    padding: 1rem;
+}
+.mainAluno__fichaDes-filtro .filtro {
+    justify-content: center;
+    text-align: left;
+    width: auto;
+}
+.mainAluno__fichaDes-filtro div {
+    flex-direction: row;
+    width: auto;
+}
+
 .select {
     background-color: #360101;
     border: none;
@@ -763,6 +777,10 @@ select:hover {
     outline: none;
 }
 .BTN:active {
+    color: var(--primary-color);
+    background-color: white;
+}
+.BTN:hover {
     color: var(--primary-color);
     background-color: white;
 }
@@ -847,7 +865,8 @@ select:hover {
         justify-content: center;
     }
 
-    .mainAluno__boEsc-filtro {
+    .mainAluno__boEsc-filtro,
+    .mainAluno__fichaDes-filtro {
         margin: 0 auto;
     }
 

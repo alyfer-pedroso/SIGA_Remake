@@ -109,6 +109,13 @@
         }, 10);
     }
 
+    function accessFichaDes() {
+        setTimeout(() => {
+            goToPage();
+            $mainAluno__displays[5].style.display = "block";
+        }, 10);
+    }
+
     // Adciocionando eventos nos botoes
     allOptBtn.addEventListener("click", accessAllOptions);
     $btn__vidaAcad.forEach((el) => {
@@ -119,6 +126,9 @@
     });
     $btn__fichaInd.forEach((el) => {
         el.addEventListener("click", accessFichaInd);
+    });
+    $btn__fichaDes.forEach((el) => {
+        el.addEventListener("click", accessFichaDes);
     });
 
     footerButtons[0].addEventListener("click", () => {
