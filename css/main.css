@@ -829,6 +829,10 @@ select:hover {
         justify-content: center;
     }
 
+    .mainAluno__boEsc-filtro {
+        margin: 0 auto;
+    }
+
     .mainAluno__fichaInd-alert {
         margin: 4rem auto 0;
     }
