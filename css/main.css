@@ -762,7 +762,7 @@ select:hover {
 }
 
 .mainAluno__progPar-filtro {
-    margin: 3rem 0;
+    margin: 3rem 1rem;
 }
 
 .mainAluno__fichaDes-filtro div,
@@ -781,7 +781,6 @@ select:hover {
     margin-bottom: 1rem;
 }
 .mainAluno__progPar-filtro div {
-    margin: 0 0 0 0.5rem;
     text-align: left;
 }
 .mainAluno__progPar-filtro div p {
