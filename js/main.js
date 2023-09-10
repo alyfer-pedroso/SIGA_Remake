@@ -154,6 +154,11 @@
             accessDisplayOPT(9);
         });
     });
+    $btn__emailIns.forEach((el) => {
+        el.addEventListener("click", () => {
+            accessDisplayOPT(10);
+        });
+    });
 
     footerButtons[0].addEventListener("click", () => {
         if (isNotMenu) {

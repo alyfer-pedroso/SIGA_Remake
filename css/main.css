@@ -595,7 +595,8 @@ select:hover {
 .mainAluno__progPar-filtro,
 .mainAluno__hrCur-filtro,
 .mainAluno__solicitDoc-filtro,
-.mainAluno__aprov-filtro {
+.mainAluno__aprov-filtro,
+.mainAluno__email-filtro {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -867,6 +868,44 @@ select:hover {
     margin-top: 0.5rem;
 }
 
+.mainAluno_emailINST,
+.mainAluno__emailINST__btnContainer {
+    margin: 1rem;
+    color: white;
+    border: 2px solid #360101;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+.mainAluno_emailINST p,
+.mainAluno__emailINST__btnContainer p {
+    font-weight: lighter;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.mainAluno_emailINST p b,
+.mainAluno__emailINST__btnContainer p b {
+    font-weight: bold;
+}
+
+.mainAluno__emailINST__btnContainer .BTN {
+    margin-top: 1rem;
+}
+
+.mainAluno__email-filtro .filtro {
+    flex-direction: column;
+}
+.mainAluno__email-filtro .filtro div {
+    width: auto;
+    text-align: left;
+    padding: 1rem;
+}
+.mainAluno__email-filtro .filtro div span p {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
 .select {
     background-color: #360101;
     border: none;
@@ -978,14 +1017,17 @@ select:hover {
     }
 
     .mainAluno__boEsc-filtro,
-    .mainAluno__fichaDes-filtro {
+    .mainAluno__fichaDes-filtro,
+    .mainAluno_emailINST,
+    .mainAluno__emailINST__btnContainer {
         margin: 0 auto;
     }
 
     .mainAluno__progPar-filtro,
     .mainAluno__hrCur-filtro,
     .mainAluno__solicitDoc-filtro,
-    .mainAluno__aprov-filtro {
+    .mainAluno__aprov-filtro,
+    .mainAluno__email-filtro {
         margin: 3rem auto 4rem;
     }
 
@@ -996,18 +1038,29 @@ select:hover {
     }
 
     .mainAluno__solicitDoc-filtro .filtro,
-    .mainAluno__aprov-filtro .filtro {
+    .mainAluno__aprov-filtro .filtro,
+    .mainAluno__email-filtro .filtro {
         width: auto;
         margin: 1rem auto;
     }
 
-    .mainAluno__aprov-filtro .filtro div {
+    .mainAluno__aprov-filtro .filtro div,
+    .mainAluno__email-filtro .filtro div {
         padding: 1rem;
     }
 
     .mainAluno__solicitDoc-filtro,
-    .mainAluno__aprov-filtro {
+    .mainAluno__aprov-filtro,
+    .mainAluno_emailINST,
+    .mainAluno__emailINST__btnContainer {
         width: 24.375rem;
+    }
+
+    .mainAluno__email-filtro {
+        width: 26.5rem;
+    }
+    .mainAluno__email-filtro .filtro div span p {
+        flex-direction: row;
     }
 
     #solictDocOBS {

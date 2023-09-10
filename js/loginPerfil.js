@@ -15,8 +15,9 @@ const pietra3x4 = "../imgs/perfil/pietra3x4.jpeg";
 const luis_henrique3x4 = "../imgs/perfil/luishenrique3x4.jpeg";
 
 class User {
-    constructor({ fullname, email, phone, rm, ra, pass, course, profileIMG }) {
+    constructor({ fullname, emailINST, email, phone, rm, ra, pass, course, profileIMG }) {
         this.fullname = fullname;
+        this.emailINST = emailINST;
         this.email = email;
         this.phone = phone;
         this.rm = rm;
@@ -30,7 +31,8 @@ class User {
 // Usuarios do TCC
 let alyfer = new User({
     fullname: "Alyfer Leandro de Araujo Pedroso",
-    email: "alyfer.pedroso@etec.sp.gov.br",
+    emailINST: "alyfer.pedroso@etec.sp.gov.br",
+    email: "alyferleandroap178@gmail.com",
     phone: "15996414866",
     rm: "20212480114",
     ra: "000105954137-3/SP",
@@ -41,7 +43,8 @@ let alyfer = new User({
 
 let emily = new User({
     fullname: "Emily Glinkovski",
-    email: "emily.glinkovski@etec.sp.gov.br",
+    emailINST: "emily.glinkovski@etec.sp.gov.br",
+    email: "emilyglinkovski@gmail.com",
     phone: "15996259887",
     rm: "20212480080",
     ra: "000105072580-3/SP",
@@ -52,7 +55,8 @@ let emily = new User({
 
 let erick = new User({
     fullname: "Erick Lopez de Queiroz",
-    email: "erick.queiroz2@etec.sp.gov.br",
+    emailINST: "erick.queiroz2@etec.sp.gov.br",
+    email: "erickqueiroz@gmail.com",
     phone: "15996947314",
     rm: "20212480044",
     ra: "000106727048-6/SP",
@@ -63,7 +67,8 @@ let erick = new User({
 
 let samuel = new User({
     fullname: "Samuel Antonio Paes Proença",
-    email: "samuel.proenca3@etec.sp.gov.br",
+    emailINST: "samuel.proenca3@etec.sp.gov.br",
+    email: "samuelproenca@gmail.com",
     phone: "11997717108",
     rm: "20212480132",
     ra: "000108565771-1/SP",
@@ -74,7 +79,8 @@ let samuel = new User({
 
 let pietra = new User({
     fullname: "Pietra Rosa Baião",
-    email: "pietra.baiao@etec.sp.gov.br",
+    emailINST: "pietra.baiao@etec.sp.gov.br",
+    email: "piiiibaiao@gmail.com",
     phone: "15991317691",
     rm: "20212480069",
     ra: "000105960617-3/SP",
@@ -86,7 +92,8 @@ let pietra = new User({
 // Usuarios fora do TCC
 let luis_henrique = new User({
     fullname: "Luis Henrique Santos de Jesus",
-    email: "luis.jesus18@etec.sp.gov.br",
+    emailINST: "luis.jesus18@etec.sp.gov.br",
+    email: "luishenrique@gmail.com",
     phone: "15988070641",
     rm: "20212480140",
     ra: "000106996518-2/SP",
@@ -247,6 +254,8 @@ const whichUser = setInterval(() => {
         let $perfilNAME = document.querySelector(".dados__p #fullname");
         let $perfilRM = document.querySelector(".dados__p #rm");
         let $perfilRA = document.querySelector(".dados__p #ra");
+        let $emailINST = document.querySelector(".emailINST");
+        let $emailM = document.querySelectorAll(".emailM");
 
         // Usuarios do TCC
         switch (localStorage.getItem("User")) {
@@ -255,6 +264,10 @@ const whichUser = setInterval(() => {
                 $perfilNAME.innerHTML = alyfer.fullname;
                 $perfilRM.innerHTML = alyfer.rm;
                 $perfilRA.innerHTML = alyfer.ra;
+                $emailINST.innerHTML = alyfer.emailINST;
+                $emailM.forEach((el) => {
+                    el.innerHTML = alyfer.email;
+                });
                 clearInterval(whichUser);
                 break;
             }
@@ -264,6 +277,10 @@ const whichUser = setInterval(() => {
                 $perfilNAME.innerHTML = emily.fullname;
                 $perfilRM.innerHTML = emily.rm;
                 $perfilRA.innerHTML = emily.ra;
+                $emailINST.innerHTML = pietra.emailINST;
+                $emailM.forEach((el) => {
+                    el.innerHTML = emily.email;
+                });
                 clearInterval(whichUser);
                 break;
             }
@@ -273,6 +290,10 @@ const whichUser = setInterval(() => {
                 $perfilNAME.innerHTML = erick.fullname;
                 $perfilRM.innerHTML = erick.rm;
                 $perfilRA.innerHTML = erick.ra;
+                $emailINST.innerHTML = erick.emailINST;
+                $emailM.forEach((el) => {
+                    el.innerHTML = erick.email;
+                });
                 clearInterval(whichUser);
                 break;
             }
@@ -282,6 +303,10 @@ const whichUser = setInterval(() => {
                 $perfilNAME.innerHTML = samuel.fullname;
                 $perfilRM.innerHTML = samuel.rm;
                 $perfilRA.innerHTML = samuel.ra;
+                $emailINST.innerHTML = samuel.emailINST;
+                $emailM.forEach((el) => {
+                    el.innerHTML = samuel.email;
+                });
                 clearInterval(whichUser);
                 break;
             }
@@ -291,6 +316,10 @@ const whichUser = setInterval(() => {
                 $perfilNAME.innerHTML = pietra.fullname;
                 $perfilRM.innerHTML = pietra.rm;
                 $perfilRA.innerHTML = pietra.ra;
+                $emailINST.innerHTML = pietra.emailINST;
+                $emailM.forEach((el) => {
+                    el.innerHTML = pietra.email;
+                });
                 clearInterval(whichUser);
                 break;
             }
@@ -301,6 +330,10 @@ const whichUser = setInterval(() => {
                 $perfilNAME.innerHTML = luis_henrique.fullname;
                 $perfilRM.innerHTML = luis_henrique.rm;
                 $perfilRA.innerHTML = luis_henrique.ra;
+                $emailINST.innerHTML = luis_henrique.emailINST;
+                $emailM.forEach((el) => {
+                    el.innerHTML = luis_henrique.email;
+                });
                 clearInterval(whichUser);
                 break;
             }
