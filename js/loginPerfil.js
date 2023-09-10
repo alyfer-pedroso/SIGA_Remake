@@ -496,7 +496,7 @@ const whichUser = setInterval(() => {
                     el.innerHTML = luis_henrique.cep;
                 });
                 $telefone1.forEach((el) => {
-                    el.innerHTML = luis_henrique.phoneNumber2.phoneN;
+                    el.innerHTML = luis_henrique.phoneNumber.phoneN;
                 });
                 $telefone2.forEach((el) => {
                     el.innerHTML = luis_henrique.phoneNumber2.phoneN;
