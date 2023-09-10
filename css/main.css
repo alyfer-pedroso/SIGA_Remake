@@ -596,7 +596,8 @@ select:hover {
 .mainAluno__hrCur-filtro,
 .mainAluno__solicitDoc-filtro,
 .mainAluno__aprov-filtro,
-.mainAluno__email-filtro {
+.mainAluno__email-filtro,
+.mainAluno__reco-recla-filtro {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -766,10 +767,12 @@ select:hover {
     font-size: 1.2rem;
 }
 
-.mainAluno__fichaDes-filtro {
+.mainAluno__fichaDes-filtro,
+.mainAluno__reco-recla-filtro {
     padding: 1rem;
 }
-.mainAluno__fichaDes-filtro .filtro {
+.mainAluno__fichaDes-filtro .filtro,
+.mainAluno__reco-recla-filtro .filtro {
     justify-content: center;
     text-align: left;
     width: auto;
@@ -781,7 +784,8 @@ select:hover {
 }
 
 .mainAluno__fichaDes-filtro div,
-.mainAluno__progPar-filtro div {
+.mainAluno__progPar-filtro div,
+.mainAluno__reco-recla-filtro div {
     flex-direction: row;
     width: auto;
 }
@@ -1073,6 +1077,20 @@ select:hover {
     background-color: #ccc;
 }
 
+.mainAluno__reco-recla-filtro {
+}
+
+.mainAluno__reco-recla-filtro .filtro {
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+.mainAluno__reco-recla-filtro .filtro div p b {
+    width: 4.375rem;
+    display: inline-block;
+    text-align: left;
+}
+
 .select {
     background-color: #360101;
     border: none;
@@ -1186,7 +1204,8 @@ select:hover {
     .mainAluno__boEsc-filtro,
     .mainAluno__fichaDes-filtro,
     .mainAluno_emailINST,
-    .mainAluno__emailINST__btnContainer {
+    .mainAluno__emailINST__btnContainer,
+    .mainAluno__reco-recla-filtro {
         margin: 0 auto;
     }
 
@@ -1261,6 +1280,12 @@ select:hover {
     .alunoTel {
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .mainAluno__reco-recla-filtro .filtro {
+        flex-direction: row;
+        gap: 5rem;
+        margin: 1rem 0;
     }
 }
 

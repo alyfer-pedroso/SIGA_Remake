@@ -1178,6 +1178,90 @@
                     </section>
                 </article>
             </section>
+
+            <section id="mainAluno__reco" class="display">
+                <h1 class="mainAluno-title firstTitle specificTitle">Solicitação da Reconsideração</h1>
+                <article class="mainAluno__reco-recla-filtro">
+                    <h2 class="mainAluno-secTitle">Filtro</h2>
+                    <div class="filtro">
+                        <div>
+                            <p><b>Periodo</b></p>
+                            <select name="alunoRecoPeriodo" id="alunoRecoPeriodo" class="select">
+                                <option value="">(Nenhum)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <p><b>Tipo</b></p>
+                            <select name="alunoRecoTipo" id="alunoRecoTipo" class="select">
+                                <option value="">(Nenhum)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="BTN">Acompanhar</button>
+                </article>
+            </section>
+
+            <section id="mainAluno__recla" class="display">
+                <h1 class="mainAluno-title firstTitle specificTitle">Solicitação da Reconsideração</h1>
+                <article class="mainAluno__reco-recla-filtro">
+                    <h2 class="mainAluno-secTitle">Filtro</h2>
+                    <div class="filtro">
+                        <div>
+                            <p><b>Periodo</b></p>
+                            <select name="alunoReclaPeriodo" id="alunoRecoPeriodo" class="select">
+                                <option value="">(Nenhum)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="BTN">Acompanhar</button>
+                </article>
+            </section>
+
+            <section id="mainAluno__attC" class="display">
+                <h1 class="mainAluno-title firstTitle specificTitle">Rematrícula</h1>
+                <article class="mainAluno__rema-attC">
+                    <section>
+                        <p>Seus dados pessoais necessitam de atualização no sistema. Favor realizar as confirmações abaixo.</p>
+                        <p>O endereço abaixo está correto?</p>
+                        <span class="alunoAddress">
+                            <p><b>RUA:</b> ANDORINHA, 203 - CASA</p>
+                            <p><b>Bairro:</b> NOVA CERQUILHO - Cerquilho/SP</p>
+                            <p><b>CEP:</b> 18520-000</p>
+                        </span>
+                        <div><input type="radio" name="address" id="addressS" />Sim <input type="radio" name="address" id="addressN" />Não</div>
+                    </section>
+                    <section>
+                        <p>O e-mail abaixo é o que mais utiliza?</p>
+                        <b class="emailM"></b>
+                        <div><input type="radio" name="alunoEMAIL" id="alunoEMAILS" />Sim <input type="radio" name="alunoEMAIL" id="alunoEMAILN" />Não</div>
+                    </section>
+                    <section>
+                        <p>Caso haja algum telefone errôneo na lista abaixo, por favor selecione para que seja deletado.</p>
+                        <div class="alunoTel">
+                            <div class="alunoTelTB">
+                                <div>
+                                    <p>
+                                        <b><input type="checkbox" name="tel" id="tel1" /></b> <span><b>(00)12345-6789</b></span> <span><b>Tipo de Telefone</b></span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="alunoTelTB">
+                                <div>
+                                    <p>
+                                        <b><input type="checkbox" name="tel" id="tel2" /></b> <span><b>(00)12345-6789</b></span> <span><b>Tipo de Telefone</b></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="alunoTelPg"><p>Deseja incluir um novo telefone?</p></div>
+                        <div><input type="radio" name="alunoTel" id="alunoTelS" />Sim <input type="radio" name="alunoTel" id="alunoTelN" />Não</div>
+                    </section>
+                </article>
+
+                <div class="mainAluno__rema-attC__btnContainer">
+                    <button class="BTN"><i class="fa-solid fa-floppy-disk" style="color: #ffffff"></i> Confirmar Atualização</button>
+                </div>
+            </section>
         </main>
 
         <footer class="footerAluno">

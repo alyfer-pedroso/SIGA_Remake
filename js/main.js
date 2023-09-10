@@ -188,6 +188,21 @@
             accessDisplayOPT(12);
         });
     });
+    $btn__reconsid.forEach((el) => {
+        el.addEventListener("click", () => {
+            accessDisplayOPT(13);
+        });
+    });
+    $btn__reclass.forEach((el) => {
+        el.addEventListener("click", () => {
+            accessDisplayOPT(14);
+        });
+    });
+    $btn__attCad.forEach((el) => {
+        el.addEventListener("click", () => {
+            accessDisplayOPT(15);
+        });
+    });
 
     $vacinaRadio.forEach((el) => {
         el.addEventListener("click", () => {
