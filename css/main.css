@@ -906,6 +906,173 @@ select:hover {
     gap: 0.5rem;
 }
 
+.mainAluno__rema-attC,
+.mainAluno__comVAC-carteirinha {
+    display: flex;
+    flex-direction: column;
+}
+.mainAluno__rema-attC section,
+.mainAluno__comVAC-carteirinha section {
+    color: white;
+    padding: 1rem;
+    margin-bottom: 3rem;
+    border-bottom: 2px solid #360101;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.mainAluno__rema-attC p,
+.mainAluno__comVAC-carteirinha p,
+.mainAluno__comVAC-carteirinha input[type="file"] {
+    font-weight: lighter;
+}
+
+.alunoAddress {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+.alunoAddress p {
+    font-weight: lighter;
+    color: white;
+}
+.alunoAddress p b {
+    color: #860808;
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+.alunoTel {
+    margin: 1rem 0 1.5rem;
+    width: auto;
+}
+.alunoTelTB {
+    display: flex;
+    width: auto;
+}
+.alunoTelTB div {
+    overflow-x: scroll;
+    white-space: nowrap;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    padding: 0.5rem;
+    max-width: 1206px;
+    background-color: #860808;
+    color: white;
+    border: 2px solid black;
+    border-bottom: 1px solid black;
+}
+.alunoTelTB div p b {
+    font-weight: bold;
+}
+.alunoTelTB div p b:first-child {
+    border-right: 2px solid black;
+    padding-right: 1rem;
+    text-transform: uppercase;
+}
+.alunoTelTB div p span b:first-child {
+    border-right: none;
+    padding: none;
+}
+.alunoTelTB div p span {
+    padding: 0 1rem;
+}
+.alunoTelTB div p span:not(:last-child) {
+    border-right: 2px solid black;
+}
+.alunoTelTB div::-webkit-scrollbar {
+    background-color: #b20000;
+    height: 5px;
+}
+.alunoTelTB div::-webkit-scrollbar-thumb {
+    background-color: #360101;
+}
+.alunoTelPg p {
+    font-weight: bold;
+    color: #860808;
+    margin-bottom: 0.5rem;
+}
+
+.mainAluno__rema-attC .emailM {
+    font-weight: bold;
+    color: #860808;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.mainAluno__rema-attC__btnContainer {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.mainAluno__comVAC-carteirinha {
+    color: white;
+}
+.mainAluno__comVAC-carteirinha section {
+    margin: 1rem;
+    background-color: #252525;
+    padding: 1rem;
+}
+.mainAluno__comVAC-carteirinha section p b {
+}
+.mainAluno__comVAC-carteirinha section:first-of-type,
+.atestadoMédicoSECTION,
+.comprovanteVacSECTION {
+    gap: 2rem;
+}
+.mainAluno__comVAC-carteirinha .enviarArq {
+    background-color: #360101;
+    padding: 1rem;
+    font-weight: bold;
+    width: 8rem;
+    color: #ccc;
+}
+.mainAluno__comVAC-carteirinha section:first-of-type input[type="file"],
+.atestadoMédicoSECTION input[type="file"],
+.comprovanteVacSECTION input[type="file"] {
+    display: none;
+}
+.mainAluno__comVAC-carteirinha .atestadoMédicoSECTION .specificTitle,
+.mainAluno__comVAC-carteirinha .comprovanteVacSECTION .specificTitle {
+    margin-bottom: 0;
+}
+.mainAluno__comVAC-carteirinha section:not(:first-of-type) span {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.comprovanteVacSECTION p b {
+    font-weight: bold;
+    color: #860808;
+}
+.comprovanteVacSECTION div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.comprovanteVacSECTION div label {
+    display: flex;
+    justify-content: space-around;
+}
+.comprovanteVacSECTION div label p {
+    font-weight: bold;
+    text-align: left;
+    width: 9rem;
+}
+.comprovanteVacSECTION div label input,
+.comprovanteVacSECTION div label select {
+    width: 7.4375rem;
+    text-align: center;
+    cursor: pointer;
+}
+.enviarArq:hover {
+    cursor: pointer;
+    color: #360101;
+    background-color: #ccc;
+}
+
 .select {
     background-color: #360101;
     border: none;
@@ -1081,6 +1248,19 @@ select:hover {
 
     .mainAluno__fichaInd-alert {
         margin: 4rem auto 0;
+    }
+
+    .mainAluno__rema-attC,
+    .mainAluno__comVAC-carteirinha {
+        align-items: center;
+    }
+    .mainAluno__rema-attC section,
+    .mainAluno__comVAC-carteirinha section {
+        width: 45.3125rem;
+    }
+    .alunoTel {
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 

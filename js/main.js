@@ -4,6 +4,11 @@
     const $mainAluno = document.querySelector(".mainAluno");
     const $mainAluno__displays = document.querySelectorAll(".display");
 
+    // DISPLAY VACINA SECTION
+    const $atestadoMédicoSECTION = document.querySelector(".atestadoMédicoSECTION");
+    const $comprovanteVacSECTION = document.querySelector(".comprovanteVacSECTION");
+    let $vacinaRadio = document.querySelectorAll(".covid");
+
     // BTNS
     const footerButtons = document.querySelectorAll(".footerAluno button");
     const $hamburguerMenu = document.querySelector(".aluno-hamburguerMenu");
@@ -36,6 +41,7 @@
         loader.addEventListener("transitionend", () => {
             loader.remove();
         });
+        radioVacina();
     });
 
     window.addEventListener("dblclick", () => {
@@ -110,6 +116,19 @@
         }, 10);
     }
 
+    function radioVacina() {
+        if ($vacinaRadio[0].checked) {
+            $atestadoMédicoSECTION.style.display = "flex";
+            $comprovanteVacSECTION.style.display = "none";
+        } else if ($vacinaRadio[1].checked) {
+            $atestadoMédicoSECTION.style.display = "none";
+            $comprovanteVacSECTION.style.display = "flex";
+        } else {
+            $atestadoMédicoSECTION.style.display = "none";
+            $comprovanteVacSECTION.style.display = "none";
+        }
+    }
+
     // Adciocionando eventos nos botoes
     allOptBtn.addEventListener("click", () => {
         accessDisplayOPT(1);
@@ -157,6 +176,22 @@
     $btn__emailIns.forEach((el) => {
         el.addEventListener("click", () => {
             accessDisplayOPT(10);
+        });
+    });
+    $btn__rematric.forEach((el) => {
+        el.addEventListener("click", () => {
+            accessDisplayOPT(11);
+        });
+    });
+    $btn__comprovVac.forEach((el) => {
+        el.addEventListener("click", () => {
+            accessDisplayOPT(12);
+        });
+    });
+
+    $vacinaRadio.forEach((el) => {
+        el.addEventListener("click", () => {
+            radioVacina();
         });
     });
 

@@ -1085,6 +1085,99 @@
                     <button class="BTN">Solic. Senha por email</button>
                 </div>
             </section>
+
+            <section id="mainAluno__rema" class="display">
+                <h1 class="mainAluno-title firstTitle specificTitle">Rematrícula</h1>
+                <article class="mainAluno__rema-attC">
+                    <section>
+                        <p>Seus dados pessoais necessitam de atualização no sistema. Favor realizar as confirmações abaixo.</p>
+                        <p>O endereço abaixo está correto?</p>
+                        <span class="alunoAddress">
+                            <p><b>RUA:</b> ANDORINHA, 203 - CASA</p>
+                            <p><b>Bairro:</b> NOVA CERQUILHO - Cerquilho/SP</p>
+                            <p><b>CEP:</b> 18520-000</p>
+                        </span>
+                        <div><input type="radio" name="address" id="addressS" />Sim <input type="radio" name="address" id="addressN" />Não</div>
+                    </section>
+                    <section>
+                        <p>O e-mail abaixo é o que mais utiliza?</p>
+                        <b class="emailM"></b>
+                        <div><input type="radio" name="alunoEMAIL" id="alunoEMAILS" />Sim <input type="radio" name="alunoEMAIL" id="alunoEMAILN" />Não</div>
+                    </section>
+                    <section>
+                        <p>Caso haja algum telefone errôneo na lista abaixo, por favor selecione para que seja deletado.</p>
+                        <div class="alunoTel">
+                            <div class="alunoTelTB">
+                                <div>
+                                    <p>
+                                        <b><input type="checkbox" name="tel" id="tel1" /></b> <span><b>(00)12345-6789</b></span> <span><b>Tipo de Telefone</b></span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="alunoTelTB">
+                                <div>
+                                    <p>
+                                        <b><input type="checkbox" name="tel" id="tel2" /></b> <span><b>(00)12345-6789</b></span> <span><b>Tipo de Telefone</b></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="alunoTelPg"><p>Deseja incluir um novo telefone?</p></div>
+                        <div><input type="radio" name="alunoTel" id="alunoTelS" />Sim <input type="radio" name="alunoTel" id="alunoTelN" />Não</div>
+                    </section>
+                </article>
+
+                <div class="mainAluno__rema-attC__btnContainer">
+                    <button class="BTN"><i class="fa-solid fa-floppy-disk" style="color: #ffffff"></i> Confirmar Atualização</button>
+                </div>
+            </section>
+
+            <section id="mainAluno__comVac" class="display">
+                <h1 class="mainAluno-title firstTitle specificTitle">Comprovante de Vacinação</h1>
+                <article class="mainAluno__comVAC-carteirinha">
+                    <h2 class="mainAluno-secTitle firstTitle specificTitle">Carteira de Vacinação (18-)</h2>
+                    <section>
+                        <label for="carteirinha" class="enviarArq">Enviar Arquivo</label>
+                        <input type="file" name="carteirinha" id="carteirinha" />
+                        <button class="BTN"><i class="fa-solid fa-floppy-disk" style="color: #ffffff"></i> Salvar Carteira de Vacinação</button>
+                    </section>
+                    <section>
+                        <p><b>Possui atestado médico que o impede de tomar a vacina covid?</b></p>
+                        <span><input type="radio" name="covid" id="covidS" class="covid" />Sim <input type="radio" name="covid" id="covidN" class="covid" checked />Não</span>
+                    </section>
+                    <section class="atestadoMédicoSECTION">
+                        <p class="specificTitle">Atestado Médico contra Vacinação</p>
+                        <label for="atestado" class="enviarArq">Enviar Arquivo</label>
+                        <input type="file" name="atestado" id="atestado" />
+                        <button class="BTN"><i class="fa-solid fa-floppy-disk" style="color: #ffffff"></i> Salvar Atestado Médico</button>
+                    </section>
+                    <section class="comprovanteVacSECTION">
+                        <p class="specificTitle">Comprovantes de Vacinação Covid</p>
+                        <p><b>Caso o comprovante da primeira e da segunda dose estejam no mesmo arquivo, poderá anexar o mesmo documento nas duas situações.</b></p>
+                        <div>
+                            <label>
+                                <p>Dose Vacina:</p>
+                                <select name="typeVac" id="typeVac" class="select">
+                                    <option value="">(Nenhum)</option>
+                                </select>
+                            </label>
+                            <label>
+                                <p>Fabricante:</p>
+                                <select name="nameFab" id="nameFab" class="select">
+                                    <option value="">(Nenhum)</option>
+                                </select>
+                            </label>
+                            <label>
+                                <p>Data da Aplicação:</p>
+                                <input type="date" name="aplicationDate" id="aplicationDate" class="select" />
+                            </label>
+                        </div>
+                        <label for="comprovante" class="enviarArq">Enviar Arquivo</label>
+                        <input type="file" name="comprovante" id="comprovante" />
+                        <button class="BTN"><i class="fa-solid fa-floppy-disk" style="color: #ffffff"></i> Salvar Dose</button>
+                    </section>
+                </article>
+            </section>
         </main>
 
         <footer class="footerAluno">
