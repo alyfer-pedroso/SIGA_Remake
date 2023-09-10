@@ -924,6 +924,9 @@ select:hover {
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
+    background-color: #252525;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 .mainAluno__rema-attC p,
 .mainAluno__comVAC-carteirinha p,
