@@ -85,64 +85,51 @@
         scrollTo(0, 0);
     }
 
-    function accessAllOptions() {
+    function accessDisplayOPT(displayIndex) {
         setTimeout(() => {
             goToPage();
-            $mainAluno__displays[1].style.display = "block";
-        }, 10);
-    }
-
-    function accessVidaAcad() {
-        setTimeout(() => {
-            goToPage();
-            $mainAluno__displays[2].style.display = "block";
-        }, 10);
-    }
-
-    function accessBoEsc() {
-        setTimeout(() => {
-            goToPage();
-            $mainAluno__displays[3].style.display = "block";
-        }, 10);
-    }
-
-    function accessFichaInd() {
-        setTimeout(() => {
-            goToPage();
-            $mainAluno__displays[4].style.display = "block";
-        }, 10);
-    }
-
-    function accessFichaDes() {
-        setTimeout(() => {
-            goToPage();
-            $mainAluno__displays[5].style.display = "block";
-        }, 10);
-    }
-
-    function accessProgPar() {
-        setTimeout(() => {
-            goToPage();
-            $mainAluno__displays[6].style.display = "block";
+            $mainAluno__displays[displayIndex].style.display = "block";
         }, 10);
     }
 
     // Adciocionando eventos nos botoes
-    allOptBtn.addEventListener("click", accessAllOptions);
+    allOptBtn.addEventListener("click", () => {
+        accessDisplayOPT(1);
+    });
     $btn__vidaAcad.forEach((el) => {
-        el.addEventListener("click", accessVidaAcad);
+        el.addEventListener("click", () => {
+            accessDisplayOPT(2);
+        });
     });
     $btn__boletimES.forEach((el) => {
-        el.addEventListener("click", accessBoEsc);
+        el.addEventListener("click", () => {
+            accessDisplayOPT(3);
+        });
     });
     $btn__fichaInd.forEach((el) => {
-        el.addEventListener("click", accessFichaInd);
+        el.addEventListener("click", () => {
+            accessDisplayOPT(4);
+        });
     });
     $btn__fichaDes.forEach((el) => {
-        el.addEventListener("click", accessFichaDes);
+        el.addEventListener("click", () => {
+            accessDisplayOPT(5);
+        });
     });
     $btn__progPar.forEach((el) => {
-        el.addEventListener("click", accessProgPar);
+        el.addEventListener("click", () => {
+            accessDisplayOPT(6);
+        });
+    });
+    $btn__horarioCur.forEach((el) => {
+        el.addEventListener("click", () => {
+            accessDisplayOPT(7);
+        });
+    });
+    $btn__solicitDoc.forEach((el) => {
+        el.addEventListener("click", () => {
+            accessDisplayOPT(8);
+        });
     });
 
     footerButtons[0].addEventListener("click", () => {
