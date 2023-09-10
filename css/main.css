@@ -965,6 +965,7 @@ select:hover {
     justify-content: space-between;
     font-size: 1rem;
     padding: 0.5rem;
+    width: 100%;
     max-width: 1206px;
     background-color: #860808;
     color: white;
@@ -1266,6 +1267,11 @@ select:hover {
     .progParTb,
     .horCurTB {
         justify-content: center;
+    }
+
+    .alunoTelTB div {
+        width: 31rem;
+        max-width: none;
     }
 
     .mainAluno__fichaInd-alert {

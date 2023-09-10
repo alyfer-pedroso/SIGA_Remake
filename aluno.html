@@ -1093,9 +1093,9 @@
                         <p>Seus dados pessoais necessitam de atualização no sistema. Favor realizar as confirmações abaixo.</p>
                         <p>O endereço abaixo está correto?</p>
                         <span class="alunoAddress">
-                            <p><b>RUA:</b> ANDORINHA, 203 - CASA</p>
-                            <p><b>Bairro:</b> NOVA CERQUILHO - Cerquilho/SP</p>
-                            <p><b>CEP:</b> 18520-000</p>
+                            <p><b>RUA:</b> <span class="rua"></span></p>
+                            <p><b>Bairro:</b> <span class="bairro"></span></p>
+                            <p><b>CEP:</b> <span class="cep"></span></p>
                         </span>
                         <div><input type="radio" name="address" id="addressS" />Sim <input type="radio" name="address" id="addressN" />Não</div>
                     </section>
@@ -1110,14 +1110,14 @@
                             <div class="alunoTelTB">
                                 <div>
                                     <p>
-                                        <b><input type="checkbox" name="tel" id="tel1" /></b> <span><b>(00)12345-6789</b></span> <span><b>Tipo de Telefone</b></span>
+                                        <b><input type="checkbox" name="tel" id="tel1" /></b> <span><b class="telefone1">(00)12345-6789</b></span> <span><b class="tipoTelefone1">Tipo de Telefone</b></span>
                                     </p>
                                 </div>
                             </div>
                             <div class="alunoTelTB">
                                 <div>
                                     <p>
-                                        <b><input type="checkbox" name="tel" id="tel2" /></b> <span><b>(00)12345-6789</b></span> <span><b>Tipo de Telefone</b></span>
+                                        <b><input type="checkbox" name="tel" id="tel2" /></b> <span><b class="telefone2">(00)12345-6789</b></span> <span><b class="tipoTelefone2">Tipo de Telefone</b></span>
                                     </p>
                                 </div>
                             </div>
@@ -1208,7 +1208,7 @@
                     <div class="filtro">
                         <div>
                             <p><b>Periodo</b></p>
-                            <select name="alunoReclaPeriodo" id="alunoRecoPeriodo" class="select">
+                            <select name="alunoReclaPeriodo" id="alunoReclaPeriodo" class="select">
                                 <option value="">(Nenhum)</option>
                             </select>
                         </div>
@@ -1224,16 +1224,16 @@
                         <p>Seus dados pessoais necessitam de atualização no sistema. Favor realizar as confirmações abaixo.</p>
                         <p>O endereço abaixo está correto?</p>
                         <span class="alunoAddress">
-                            <p><b>RUA:</b> ANDORINHA, 203 - CASA</p>
-                            <p><b>Bairro:</b> NOVA CERQUILHO - Cerquilho/SP</p>
-                            <p><b>CEP:</b> 18520-000</p>
+                            <p><b>RUA:</b> <span class="rua"></span></p>
+                            <p><b>Bairro:</b> <span class="bairro"></span></p>
+                            <p><b>CEP:</b> <span class="cep"></span></p>
                         </span>
-                        <div><input type="radio" name="address" id="addressS" />Sim <input type="radio" name="address" id="addressN" />Não</div>
+                        <div><input type="radio" name="attCaddress" id="attCaddressS" />Sim <input type="radio" name="attCaddress" id="attCaddressN" />Não</div>
                     </section>
                     <section>
                         <p>O e-mail abaixo é o que mais utiliza?</p>
                         <b class="emailM"></b>
-                        <div><input type="radio" name="alunoEMAIL" id="alunoEMAILS" />Sim <input type="radio" name="alunoEMAIL" id="alunoEMAILN" />Não</div>
+                        <div><input type="radio" name="attCalunoEMAIL" id="attCalunoEMAILS" />Sim <input type="radio" name="attCalunoEMAIL" id="attCalunoEMAILN" />Não</div>
                     </section>
                     <section>
                         <p>Caso haja algum telefone errôneo na lista abaixo, por favor selecione para que seja deletado.</p>
@@ -1241,20 +1241,20 @@
                             <div class="alunoTelTB">
                                 <div>
                                     <p>
-                                        <b><input type="checkbox" name="tel" id="tel1" /></b> <span><b>(00)12345-6789</b></span> <span><b>Tipo de Telefone</b></span>
+                                        <b><input type="checkbox" name="attCtel" id="attCtel1" /></b> <span><b class="telefone1">(00)12345-6789</b></span> <span><b class="tipoTelefone1">Tipo de Telefone</b></span>
                                     </p>
                                 </div>
                             </div>
                             <div class="alunoTelTB">
                                 <div>
                                     <p>
-                                        <b><input type="checkbox" name="tel" id="tel2" /></b> <span><b>(00)12345-6789</b></span> <span><b>Tipo de Telefone</b></span>
+                                        <b><input type="checkbox" name="attCtel" id="attCtel2" /></b> <span><b class="telefone2">(00)12345-6789</b></span> <span><b class="tipoTelefone2">Tipo de Telefone</b></span>
                                     </p>
                                 </div>
                             </div>
                         </div>
                         <div class="alunoTelPg"><p>Deseja incluir um novo telefone?</p></div>
-                        <div><input type="radio" name="alunoTel" id="alunoTelS" />Sim <input type="radio" name="alunoTel" id="alunoTelN" />Não</div>
+                        <div><input type="radio" name="attCalunoTel" id="attCalunoTelS" />Sim <input type="radio" name="attCalunoTel" id="attCalunoTelN" />Não</div>
                     </section>
                 </article>
 

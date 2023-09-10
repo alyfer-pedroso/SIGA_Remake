@@ -15,16 +15,26 @@ const pietra3x4 = "../imgs/perfil/pietra3x4.jpeg";
 const luis_henrique3x4 = "../imgs/perfil/luishenrique3x4.jpeg";
 
 class User {
-    constructor({ fullname, emailINST, email, phone, rm, ra, pass, course, profileIMG }) {
+    constructor({ fullname, emailINST, email, phone, phoneT, phone2, phoneT2, rm, ra, pass, course, profileIMG, street, neighborhood, cep }) {
         this.fullname = fullname;
         this.emailINST = emailINST;
         this.email = email;
-        this.phone = phone;
+        this.phoneNumber = {
+            phoneN: phone,
+            phoneType: phoneT,
+        };
+        this.phoneNumber2 = {
+            phoneN: phone2,
+            phoneType: phoneT2,
+        };
         this.rm = rm;
         this.ra = ra;
         this.pass = pass;
         this.course = course;
         this.profileIMG = profileIMG;
+        this.street = street;
+        this.neighborhood = neighborhood;
+        this.cep = cep;
     }
 }
 
@@ -33,43 +43,61 @@ let alyfer = new User({
     fullname: "Alyfer Leandro de Araujo Pedroso",
     emailINST: "alyfer.pedroso@etec.sp.gov.br",
     email: "alyferleandroap178@gmail.com",
-    phone: "15996414866",
+    phone: "(15)99641-4866",
+    phoneT: "(Telefone Celular)",
+    phone2: "(15)99689-1314",
+    phoneT2: "(Telefone Celular)",
     rm: "20212480114",
     ra: "000105954137-3/SP",
-    pass: "123",
+    pass: "Alyfer17182424#",
     course: courses.ADM_OLD,
     profileIMG: alyfer3x4,
+    street: "ANDORINHA, 203 - CASA",
+    neighborhood: "NOVA CERQUILHO - Cerquilho/SP",
+    cep: "18520-000",
 });
 
 let emily = new User({
     fullname: "Emily Glinkovski",
     emailINST: "emily.glinkovski@etec.sp.gov.br",
     email: "emilyglinkovski@gmail.com",
-    phone: "15996259887",
+    phone: "(15)99625-9887",
+    phoneT: "(Telefone Celular)",
+    phone2: "(15)99761-7981",
+    phoneT2: "(Telefone Celular)",
     rm: "20212480080",
     ra: "000105072580-3/SP",
-    pass: "123",
+    pass: "#Eg091005",
     course: courses.ADM_OLD,
     profileIMG: emily3x4,
+    street: "23 DE MAIO, 285",
+    neighborhood: "NOSSA SENHORA DE LOURDES - Cerquilho/SP",
+    cep: "18520-000",
 });
 
 let erick = new User({
     fullname: "Erick Lopez de Queiroz",
     emailINST: "erick.queiroz2@etec.sp.gov.br",
-    email: "erickqueiroz@gmail.com",
-    phone: "15996947314",
+    email: "cris.tapete@gmail.com",
+    phone: "(15)99762-7269",
+    phoneT: "(Telefone Celular)",
+    phone2: "(15)99708-9114",
+    phoneT2: "(Telefone Celular)",
     rm: "20212480044",
     ra: "000106727048-6/SP",
-    pass: "123",
+    pass: "W4bbaL4bba",
     course: courses.ADM_OLD,
     profileIMG: erick3x4,
+    street: "PRACA LUIZ URSO, 253 - CASA",
+    neighborhood: "JARDIM ALIANCA II - Cerquilho/SP",
+    cep: "18520-000",
 });
 
 let samuel = new User({
     fullname: "Samuel Antonio Paes Proença",
     emailINST: "samuel.proenca3@etec.sp.gov.br",
     email: "samuelproenca@gmail.com",
-    phone: "11997717108",
+    phone: "(11)99771-7108",
     rm: "20212480132",
     ra: "000108565771-1/SP",
     pass: "123",
@@ -81,25 +109,37 @@ let pietra = new User({
     fullname: "Pietra Rosa Baião",
     emailINST: "pietra.baiao@etec.sp.gov.br",
     email: "piiiibaiao@gmail.com",
-    phone: "15991317691",
+    phone: "(15)99131-7691",
+    phoneT: "(Telefone Celular)",
+    phone2: "(15)99138-5086",
+    phoneT2: "(Telefone Residencial)",
     rm: "20212480069",
     ra: "000105960617-3/SP",
-    pass: "123",
+    pass: "Cerquilho10#",
     course: courses.ADM_OLD,
     profileIMG: pietra3x4,
+    street: "Pedro Flora, 185 - CASA",
+    neighborhood: "SÃO FRANCISCO - Cerquilho/SP",
+    cep: "185270876",
 });
 
 // Usuarios fora do TCC
 let luis_henrique = new User({
     fullname: "Luis Henrique Santos de Jesus",
     emailINST: "luis.jesus18@etec.sp.gov.br",
-    email: "luishenrique@gmail.com",
-    phone: "15988070641",
+    email: "luishenriquesantosdejesus02@gmail.com",
+    phone: "(15)98807-0641",
+    phoneT: "(Telefone Celular)",
+    phone2: "(15)99790-8465",
+    phoneT2: "(Telefone Celular)",
     rm: "20212480140",
     ra: "000106996518-2/SP",
     pass: "157155",
     course: courses.ADM_OLD,
     profileIMG: luis_henrique3x4,
+    street: "GERALDO PIRES DA SILVA, 310 - PERTO DA LINHA DE TREM",
+    neighborhood: "RESIDENCIAL ALIANCA - Cerquilho/SP",
+    cep: "18520-000",
 });
 
 //Verificando para login
@@ -250,12 +290,19 @@ if ($loginDisplay) {
 // Verificando qual usuário foi logado
 const whichUser = setInterval(() => {
     if ($alunoDisplay) {
-        let $perfilIMG = document.querySelector(".dados__img img");
-        let $perfilNAME = document.querySelector(".dados__p #fullname");
-        let $perfilRM = document.querySelector(".dados__p #rm");
-        let $perfilRA = document.querySelector(".dados__p #ra");
-        let $emailINST = document.querySelector(".emailINST");
-        let $emailM = document.querySelectorAll(".emailM");
+        const $perfilIMG = document.querySelector(".dados__img img");
+        const $perfilNAME = document.querySelector(".dados__p #fullname");
+        const $perfilRM = document.querySelector(".dados__p #rm");
+        const $perfilRA = document.querySelector(".dados__p #ra");
+        const $emailINST = document.querySelector(".emailINST");
+        const $emailM = document.querySelectorAll(".emailM");
+        const $perfilRua = document.querySelectorAll(".rua");
+        const $perfilBairro = document.querySelectorAll(".bairro");
+        const $perfilCep = document.querySelectorAll(".cep");
+        const $telefone1 = document.querySelectorAll(".telefone1");
+        const $telefone2 = document.querySelectorAll(".telefone2");
+        const $teleTipo1 = document.querySelectorAll(".tipoTelefone1");
+        const $teleTipo2 = document.querySelectorAll(".tipoTelefone2");
 
         // Usuarios do TCC
         switch (localStorage.getItem("User")) {
@@ -267,6 +314,27 @@ const whichUser = setInterval(() => {
                 $emailINST.innerHTML = alyfer.emailINST;
                 $emailM.forEach((el) => {
                     el.innerHTML = alyfer.email;
+                });
+                $perfilRua.forEach((el) => {
+                    el.innerHTML = alyfer.street;
+                });
+                $perfilBairro.forEach((el) => {
+                    el.innerHTML = alyfer.neighborhood;
+                });
+                $perfilCep.forEach((el) => {
+                    el.innerHTML = alyfer.cep;
+                });
+                $telefone1.forEach((el) => {
+                    el.innerHTML = alyfer.phoneNumber.phoneN;
+                });
+                $telefone2.forEach((el) => {
+                    el.innerHTML = alyfer.phoneNumber2.phoneN;
+                });
+                $teleTipo1.forEach((el) => {
+                    el.innerHTML = alyfer.phoneNumber.phoneType;
+                });
+                $teleTipo2.forEach((el) => {
+                    el.innerHTML = alyfer.phoneNumber2.phoneType;
                 });
                 clearInterval(whichUser);
                 break;
@@ -281,6 +349,27 @@ const whichUser = setInterval(() => {
                 $emailM.forEach((el) => {
                     el.innerHTML = emily.email;
                 });
+                $perfilRua.forEach((el) => {
+                    el.innerHTML = emily.street;
+                });
+                $perfilBairro.forEach((el) => {
+                    el.innerHTML = emily.neighborhood;
+                });
+                $perfilCep.forEach((el) => {
+                    el.innerHTML = emily.cep;
+                });
+                $telefone1.forEach((el) => {
+                    el.innerHTML = emily.phoneNumber.phoneN;
+                });
+                $telefone2.forEach((el) => {
+                    el.innerHTML = emily.phoneNumber2.phoneN;
+                });
+                $teleTipo1.forEach((el) => {
+                    el.innerHTML = emily.phoneNumber.phoneType;
+                });
+                $teleTipo2.forEach((el) => {
+                    el.innerHTML = emily.phoneNumber2.phoneType;
+                });
                 clearInterval(whichUser);
                 break;
             }
@@ -293,6 +382,27 @@ const whichUser = setInterval(() => {
                 $emailINST.innerHTML = erick.emailINST;
                 $emailM.forEach((el) => {
                     el.innerHTML = erick.email;
+                });
+                $perfilRua.forEach((el) => {
+                    el.innerHTML = erick.street;
+                });
+                $perfilBairro.forEach((el) => {
+                    el.innerHTML = erick.neighborhood;
+                });
+                $perfilCep.forEach((el) => {
+                    el.innerHTML = erick.cep;
+                });
+                $telefone1.forEach((el) => {
+                    el.innerHTML = erick.phoneNumber.phoneN;
+                });
+                $telefone2.forEach((el) => {
+                    el.innerHTML = erick.phoneNumber2.phoneN;
+                });
+                $teleTipo1.forEach((el) => {
+                    el.innerHTML = erick.phoneNumber.phoneType;
+                });
+                $teleTipo2.forEach((el) => {
+                    el.innerHTML = erick.phoneNumber2.phoneType;
                 });
                 clearInterval(whichUser);
                 break;
@@ -307,6 +417,27 @@ const whichUser = setInterval(() => {
                 $emailM.forEach((el) => {
                     el.innerHTML = samuel.email;
                 });
+                $perfilRua.forEach((el) => {
+                    el.innerHTML = samuel.street;
+                });
+                $perfilBairro.forEach((el) => {
+                    el.innerHTML = samuel.neighborhood;
+                });
+                $perfilCep.forEach((el) => {
+                    el.innerHTML = samuel.cep;
+                });
+                $telefone1.forEach((el) => {
+                    el.innerHTML = samuel.phoneNumber.phoneN;
+                });
+                $telefone2.forEach((el) => {
+                    el.innerHTML = samuel.phoneNumber2.phoneN;
+                });
+                $teleTipo1.forEach((el) => {
+                    el.innerHTML = samuel.phoneNumber.phoneType;
+                });
+                $teleTipo2.forEach((el) => {
+                    el.innerHTML = samuel.phoneNumber2.phoneType;
+                });
                 clearInterval(whichUser);
                 break;
             }
@@ -319,6 +450,27 @@ const whichUser = setInterval(() => {
                 $emailINST.innerHTML = pietra.emailINST;
                 $emailM.forEach((el) => {
                     el.innerHTML = pietra.email;
+                });
+                $perfilRua.forEach((el) => {
+                    el.innerHTML = pietra.street;
+                });
+                $perfilBairro.forEach((el) => {
+                    el.innerHTML = pietra.neighborhood;
+                });
+                $perfilCep.forEach((el) => {
+                    el.innerHTML = pietra.cep;
+                });
+                $telefone1.forEach((el) => {
+                    el.innerHTML = pietra.phoneNumber.phoneN;
+                });
+                $telefone2.forEach((el) => {
+                    el.innerHTML = pietra.phoneNumber2.phoneN;
+                });
+                $teleTipo1.forEach((el) => {
+                    el.innerHTML = pietra.phoneNumber.phoneType;
+                });
+                $teleTipo2.forEach((el) => {
+                    el.innerHTML = pietra.phoneNumber2.phoneType;
                 });
                 clearInterval(whichUser);
                 break;
@@ -333,6 +485,27 @@ const whichUser = setInterval(() => {
                 $emailINST.innerHTML = luis_henrique.emailINST;
                 $emailM.forEach((el) => {
                     el.innerHTML = luis_henrique.email;
+                });
+                $perfilRua.forEach((el) => {
+                    el.innerHTML = luis_henrique.street;
+                });
+                $perfilBairro.forEach((el) => {
+                    el.innerHTML = luis_henrique.neighborhood;
+                });
+                $perfilCep.forEach((el) => {
+                    el.innerHTML = luis_henrique.cep;
+                });
+                $telefone1.forEach((el) => {
+                    el.innerHTML = luis_henrique.phoneNumber2.phoneN;
+                });
+                $telefone2.forEach((el) => {
+                    el.innerHTML = luis_henrique.phoneNumber2.phoneN;
+                });
+                $teleTipo1.forEach((el) => {
+                    el.innerHTML = luis_henrique.phoneNumber.phoneType;
+                });
+                $teleTipo2.forEach((el) => {
+                    el.innerHTML = luis_henrique.phoneNumber2.phoneType;
                 });
                 clearInterval(whichUser);
                 break;
