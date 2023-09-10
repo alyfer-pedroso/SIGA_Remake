@@ -65,6 +65,24 @@
         });
     }
 
+    //Adicionando a data atual nos elementos que exige isso
+    const $dateElement = document.querySelectorAll(".date");
+    let currentDate = new Date();
+    let day = currentDate.getDate();
+    let mounth = currentDate.getMonth() + 1;
+    let year = currentDate.getFullYear();
+
+    if (day < 10) {
+        day = `0${day}`;
+    }
+    if (mounth < 10) {
+        mounth = `0${mounth}`;
+    }
+
+    $dateElement.forEach((el) => {
+        el.innerHTML = `${day}/${mounth}/${year}`;
+    });
+
     // Funções das páginas
     function initPage() {
         scrollTo(0, 0);
@@ -129,6 +147,11 @@
     $btn__solicitDoc.forEach((el) => {
         el.addEventListener("click", () => {
             accessDisplayOPT(8);
+        });
+    });
+    $btn__aprovEs.forEach((el) => {
+        el.addEventListener("click", () => {
+            accessDisplayOPT(9);
         });
     });
 

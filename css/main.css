@@ -594,7 +594,8 @@ select:hover {
 .mainAluno__fichaDes-filtro,
 .mainAluno__progPar-filtro,
 .mainAluno__hrCur-filtro,
-.mainAluno__solicitDoc-filtro {
+.mainAluno__solicitDoc-filtro,
+.mainAluno__aprov-filtro {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -822,27 +823,34 @@ select:hover {
     gap: 1rem;
 }
 
-.mainAluno__solicitDoc-filtro .filtro {
+.mainAluno__solicitDoc-filtro .filtro,
+.mainAluno__aprov-filtro .filtro {
     display: flex;
     flex-direction: column;
 }
 .mainAluno__solicitDoc-filtro .filtro div,
-.mainAluno__solicitDoc-filtro .filtro div span p {
+.mainAluno__solicitDoc-filtro .filtro div span p,
+.mainAluno__aprov-filtro div,
+.mainAluno__aprov-filtro div span p {
     width: 100%;
     display: flex;
     flex-direction: row;
 }
-.mainAluno__solicitDoc-filtro .filtro div {
+.mainAluno__solicitDoc-filtro .filtro div,
+.mainAluno__aprov-filtro .filtro div {
     gap: 2rem;
     padding: 1rem 0 1rem 1rem;
 }
+
 .mainAluno__solicitDoc-filtro .filtro div:nth-child(2) span:nth-child(2) {
     margin-left: 1.8rem;
 }
-.mainAluno__solicitDoc-filtro .filtro div span p {
+.mainAluno__solicitDoc-filtro .filtro div span p,
+.mainAluno__aprov-filtro div span p {
     gap: 1rem;
 }
-.mainAluno__solicitDoc-filtro__btnContainer {
+.mainAluno__solicitDoc-filtro__btnContainer,
+.mainAluno__aprov-filtro__btnContainer {
     text-align: center;
 }
 .mainAluno__solicitDoc-filtro__btnContainer .BTN:nth-child(2) i {
@@ -976,7 +984,8 @@ select:hover {
 
     .mainAluno__progPar-filtro,
     .mainAluno__hrCur-filtro,
-    .mainAluno__solicitDoc-filtro {
+    .mainAluno__solicitDoc-filtro,
+    .mainAluno__aprov-filtro {
         margin: 3rem auto 4rem;
     }
 
@@ -986,21 +995,29 @@ select:hover {
         margin: 1rem auto;
     }
 
-    .mainAluno__solicitDoc-filtro .filtro {
+    .mainAluno__solicitDoc-filtro .filtro,
+    .mainAluno__aprov-filtro .filtro {
         width: auto;
         margin: 1rem auto;
     }
-    .mainAluno__solicitDoc-filtro {
+
+    .mainAluno__aprov-filtro .filtro div {
+        padding: 1rem;
+    }
+
+    .mainAluno__solicitDoc-filtro,
+    .mainAluno__aprov-filtro {
         width: 24.375rem;
     }
 
     #solictDocOBS {
-        width: 100%;
+        width: 110%;
     }
 
     .mainAluno__progPar-filtro .filtro div p,
     .mainAluno__hrCur-filtro .filtro div p,
-    .mainAluno__solicitDoc-filtro .filtro div p {
+    .mainAluno__solicitDoc-filtro .filtro div p,
+    .mainAluno__aprov-filtro .filtro div p {
         font-size: 1rem;
     }
 
