@@ -1099,6 +1099,7 @@ select:hover {
 }
 
 .perfilConfig-container {
+    margin-top: 5.4rem;
     background-color: #360101;
     color: white;
     display: flex;
