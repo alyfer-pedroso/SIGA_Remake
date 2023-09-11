@@ -1239,7 +1239,7 @@ select:hover {
     }
 
     .mainAluno {
-        min-height: 100vh;
+        min-height: 150vh;
         position: fixed;
         left: 0;
         top: 0;
