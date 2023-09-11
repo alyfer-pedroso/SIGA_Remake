@@ -226,10 +226,10 @@
     });
 
     $btnMenu__perfil.addEventListener("click", () => {
-            accessDisplayOPT(16);
-            $mainAluno__perfil.style.display = "none";
-        });
- 
+        accessDisplayOPT(16);
+        $mainAluno__perfil.style.display = "none";
+        body.style.overflow = "visible";
+    });
 
     $vacinaRadio.forEach((el) => {
         el.addEventListener("click", () => {

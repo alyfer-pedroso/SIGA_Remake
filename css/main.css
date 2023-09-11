@@ -8,10 +8,13 @@ html {
 
 body {
     min-width: 100vw;
-    min-height: 100vh;
+    height: 100vh;
     margin: 0;
     padding: 0;
     position: relative;
+}
+body::-webkit-scrollbar {
+    display: none;
 }
 
 /*LOGIN*/
@@ -414,7 +417,7 @@ select:hover {
 .perfil__curso label b {
     margin-right: 0.5rem;
 }
-#perfil_cursos {
+.perfil_cursos {
     background-color: #360101;
     border: none;
     outline: none;
@@ -705,13 +708,15 @@ select:hover {
 .progParTb div::-webkit-scrollbar,
 .horCurTB div::-webkit-scrollbar {
     background-color: #b20000;
-    height: 5px;
+    height: 6.5px;
+    visibility: hidden;
 }
 .componenteCurricular__materia div::-webkit-scrollbar-thumb,
 .fiadeTb div::-webkit-scrollbar-thumb,
 .progParTb div::-webkit-scrollbar-thumb,
 .horCurTB div::-webkit-scrollbar-thumb {
     background-color: #360101;
+    border-radius: 1rem;
 }
 
 .mainAluno__boEsc-filtro {
@@ -995,10 +1000,12 @@ select:hover {
 }
 .alunoTelTB div::-webkit-scrollbar {
     background-color: #b20000;
-    height: 5px;
+    height: 6.5px;
+    visibility: hidden;
 }
 .alunoTelTB div::-webkit-scrollbar-thumb {
     background-color: #360101;
+    border-radius: 1rem;
 }
 .alunoTelPg p {
     font-weight: bold;
@@ -1098,10 +1105,14 @@ select:hover {
     text-align: left;
 }
 
+#mainAluno__perfilConfig {
+    height: 120vh;
+}
 .perfilConfig-container {
-    margin-top: 5.4rem;
+    margin-top: 4.4rem;
     background-color: #360101;
     color: white;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1111,18 +1122,39 @@ select:hover {
 .perfilConfig-container .dados__img {
     transform: scale(0.9);
 }
-.perfilConfig-container .dados__p {
-    align-self: center;
+.perfilConfig-container .perfil__curso + .dados__p {
+    /* align-self: center; */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 1rem;
+    width: 100%;
+}
+.perfilConfig-container .dados__p p {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 .dados-1 {
     display: flex;
     gap: 1rem;
+    background-color: #5f0000;
+    width: 100vw;
+    justify-content: center;
+    padding: 1rem 0 2.5rem;
+    border-radius: 0 0 15px 15px;
 }
 .dados-1 .dados__img {
     margin-left: -1rem;
 }
 .dados-1 .dados__p {
     align-self: center;
+}
+.dados-1 .dados__p p {
+    display: block;
+    text-align: left;
+    margin-bottom: 0;
 }
 
 .select {
@@ -1177,6 +1209,7 @@ select:hover {
     } */
 
     body::-webkit-scrollbar {
+        display: block;
         width: 5px;
         height: 0px;
     }
@@ -1207,6 +1240,10 @@ select:hover {
 
     .mainAluno {
         min-height: 100vh;
+        position: fixed;
+        left: 0;
+        top: 0;
+        overflow: hidden;
     }
     .mainAluno__perfil {
         padding-top: 1rem;

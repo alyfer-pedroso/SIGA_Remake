@@ -96,13 +96,19 @@ let erick = new User({
 let samuel = new User({
     fullname: "Samuel Antonio Paes Proença",
     emailINST: "samuel.proenca3@etec.sp.gov.br",
-    email: "samuelproenca@gmail.com",
+    email: "samyuerupuroensa@hotmail.com",
     phone: "(11)99771-7108",
+    phoneT: "(Telefone Celular)",
+    phone2: "(15)99859-9224",
+    phoneT2: "(Telefone Celular)",
     rm: "20212480132",
     ra: "000108565771-1/SP",
-    pass: "123",
+    pass: "Samu3110",
     course: courses.ADM_OLD,
     profileIMG: samuel3x4,
+    street: "DA FAZENDINHA, 401",
+    neighborhood: "CENTRO - Cerquilho/SP",
+    cep: "18520-000",
 });
 
 let pietra = new User({
@@ -440,19 +446,19 @@ const whichUser = setInterval(() => {
 
             case "samuel": {
                 $perfilIMG.forEach((el) => {
-                    el.src = samuel3x4.profileIMG;
+                    el.src = samuel.profileIMG;
                 });
                 $perfilNAME.forEach((el) => {
-                    el.innerHTML = samuel3x4.fullname;
+                    el.innerHTML = samuel.fullname;
                 });
                 $perfilRM.forEach((el) => {
-                    el.innerHTML = samuel3x4.rm;
+                    el.innerHTML = samuel.rm;
                 });
                 $perfilRA.forEach((el) => {
-                    el.innerHTML = samuel3x4.ra;
+                    el.innerHTML = samuel.ra;
                 });
                 $emailINST.forEach((el) => {
-                    el.innerHTML = samuel3x4.emailINST;
+                    el.innerHTML = samuel.emailINST;
                 });
                 $emailM.forEach((el) => {
                     el.innerHTML = samuel.email;
