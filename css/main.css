@@ -320,6 +320,9 @@ select:hover {
     height: 27px;
     padding: 1.5rem 1rem 1.5rem;
 }
+#sigaHeaderBTN {
+    cursor: pointer;
+}
 
 .mainAluno {
     /* height: 100%; */

@@ -14,6 +14,7 @@
     const $hamburguerMenu = document.querySelector(".aluno-hamburguerMenu");
     const exitButton = document.getElementById("exit");
     const allOptBtn = document.querySelector(".optionsNav__btn");
+    const $sigaHeaderBTN = document.getElementById("sigaHeaderBTN");
 
     // OPT BTNS
     const $btn__vidaAcad = document.querySelectorAll(".OPT-VIDAACAD");
@@ -107,6 +108,22 @@
         isHome = false;
         loaderPage();
         scrollTo(0, 0);
+    }
+
+    function accessHome() {
+        if (isNotMenu) {
+            initPage();
+            scrollTo(0, 0);
+        } else {
+            if ($hamburguerMenu.classList == "aluno-hamburguerMenu opened") {
+                footerButtons.forEach((el) => {
+                    el.classList.remove("markedBTN");
+                });
+                body.style.overflow = "visible";
+            }
+            $hamburguerMenu.classList.remove("opened");
+            footerButtons[0].classList.add("markedBTN");
+        }
     }
 
     function accessDisplayOPT(displayIndex) {
@@ -210,21 +227,9 @@
         });
     });
 
-    footerButtons[0].addEventListener("click", () => {
-        if (isNotMenu) {
-            initPage();
-            scrollTo(0, 0);
-        } else {
-            if ($hamburguerMenu.classList == "aluno-hamburguerMenu opened") {
-                footerButtons.forEach((el) => {
-                    el.classList.remove("markedBTN");
-                });
-                body.style.overflow = "visible";
-            }
-            $hamburguerMenu.classList.remove("opened");
-            footerButtons[0].classList.add("markedBTN");
-        }
-    });
+    $sigaHeaderBTN.addEventListener("click", accessHome);
+
+    footerButtons[0].addEventListener("click", accessHome);
 
     footerButtons[1].addEventListener("click", () => {
         $hamburguerMenu.classList.toggle("opened");
