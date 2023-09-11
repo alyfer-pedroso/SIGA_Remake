@@ -3,6 +3,7 @@
     const body = document.querySelector("body");
     const $mainAluno = document.querySelector(".mainAluno");
     const $mainAluno__displays = document.querySelectorAll(".display");
+    const $mainAluno__perfil = document.querySelector(".mainAluno__perfil");
 
     // DISPLAY VACINA SECTION
     const $atestadoMédicoSECTION = document.querySelector(".atestadoMédicoSECTION");
@@ -15,6 +16,9 @@
     const exitButton = document.getElementById("exit");
     const allOptBtn = document.querySelector(".optionsNav__btn");
     const $sigaHeaderBTN = document.getElementById("sigaHeaderBTN");
+
+    // MENU BTNS
+    const $btnMenu__perfil = document.getElementById("perfilConfigBTN");
 
     // OPT BTNS
     const $btn__vidaAcad = document.querySelectorAll(".OPT-VIDAACAD");
@@ -218,6 +222,13 @@
     $btn__attCad.forEach((el) => {
         el.addEventListener("click", () => {
             accessDisplayOPT(15);
+        });
+    });
+
+    $btnMenu__perfil.forEach((el) => {
+        el.addEventListener("click", () => {
+            accessDisplayOPT(16);
+            $mainAluno__perfil.style.display = "none";
         });
     });
 

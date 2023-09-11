@@ -290,11 +290,11 @@ if ($loginDisplay) {
 // Verificando qual usuário foi logado
 const whichUser = setInterval(() => {
     if ($alunoDisplay) {
-        const $perfilIMG = document.querySelector(".dados__img img");
-        const $perfilNAME = document.querySelector(".dados__p #fullname");
-        const $perfilRM = document.querySelector(".dados__p #rm");
-        const $perfilRA = document.querySelector(".dados__p #ra");
-        const $emailINST = document.querySelector(".emailINST");
+        const $perfilIMG = document.querySelectorAll(".dados__img img");
+        const $perfilNAME = document.querySelectorAll(".dados__p .fullname");
+        const $perfilRM = document.querySelectorAll(".dados__p .rm");
+        const $perfilRA = document.querySelectorAll(".dados__p .ra");
+        const $emailINST = document.querySelectorAll(".emailINST");
         const $emailM = document.querySelectorAll(".emailM");
         const $perfilRua = document.querySelectorAll(".rua");
         const $perfilBairro = document.querySelectorAll(".bairro");
@@ -307,11 +307,21 @@ const whichUser = setInterval(() => {
         // Usuarios do TCC
         switch (localStorage.getItem("User")) {
             case "alyfer": {
-                $perfilIMG.src = alyfer.profileIMG;
-                $perfilNAME.innerHTML = alyfer.fullname;
-                $perfilRM.innerHTML = alyfer.rm;
-                $perfilRA.innerHTML = alyfer.ra;
-                $emailINST.innerHTML = alyfer.emailINST;
+                $perfilIMG.forEach((el) => {
+                    el.src = alyfer.profileIMG;
+                });
+                $perfilNAME.forEach((el) => {
+                    el.innerHTML = alyfer.fullname;
+                });
+                $perfilRM.forEach((el) => {
+                    el.innerHTML = alyfer.rm;
+                });
+                $perfilRA.forEach((el) => {
+                    el.innerHTML = alyfer.ra;
+                });
+                $emailINST.forEach((el) => {
+                    el.innerHTML = alyfer.emailINST;
+                });
                 $emailM.forEach((el) => {
                     el.innerHTML = alyfer.email;
                 });
@@ -341,11 +351,21 @@ const whichUser = setInterval(() => {
             }
 
             case "emily": {
-                $perfilIMG.src = emily.profileIMG;
-                $perfilNAME.innerHTML = emily.fullname;
-                $perfilRM.innerHTML = emily.rm;
-                $perfilRA.innerHTML = emily.ra;
-                $emailINST.innerHTML = pietra.emailINST;
+                $perfilIMG.forEach((el) => {
+                    el.src = emily.profileIMG;
+                });
+                $perfilNAME.forEach((el) => {
+                    el.innerHTML = emily.fullname;
+                });
+                $perfilRM.forEach((el) => {
+                    el.innerHTML = emily.rm;
+                });
+                $perfilRA.forEach((el) => {
+                    el.innerHTML = emily.ra;
+                });
+                $emailINST.forEach((el) => {
+                    el.innerHTML = emily.emailINST;
+                });
                 $emailM.forEach((el) => {
                     el.innerHTML = emily.email;
                 });
@@ -375,11 +395,21 @@ const whichUser = setInterval(() => {
             }
 
             case "erick": {
-                $perfilIMG.src = erick.profileIMG;
-                $perfilNAME.innerHTML = erick.fullname;
-                $perfilRM.innerHTML = erick.rm;
-                $perfilRA.innerHTML = erick.ra;
-                $emailINST.innerHTML = erick.emailINST;
+                $perfilIMG.forEach((el) => {
+                    el.src = erick.profileIMG;
+                });
+                $perfilNAME.forEach((el) => {
+                    el.innerHTML = erick.fullname;
+                });
+                $perfilRM.forEach((el) => {
+                    el.innerHTML = erick.rm;
+                });
+                $perfilRA.forEach((el) => {
+                    el.innerHTML = erick.ra;
+                });
+                $emailINST.forEach((el) => {
+                    el.innerHTML = erick.emailINST;
+                });
                 $emailM.forEach((el) => {
                     el.innerHTML = erick.email;
                 });
@@ -409,11 +439,21 @@ const whichUser = setInterval(() => {
             }
 
             case "samuel": {
-                $perfilIMG.src = samuel.profileIMG;
-                $perfilNAME.innerHTML = samuel.fullname;
-                $perfilRM.innerHTML = samuel.rm;
-                $perfilRA.innerHTML = samuel.ra;
-                $emailINST.innerHTML = samuel.emailINST;
+                $perfilIMG.forEach((el) => {
+                    el.src = samuel3x4.profileIMG;
+                });
+                $perfilNAME.forEach((el) => {
+                    el.innerHTML = samuel3x4.fullname;
+                });
+                $perfilRM.forEach((el) => {
+                    el.innerHTML = samuel3x4.rm;
+                });
+                $perfilRA.forEach((el) => {
+                    el.innerHTML = samuel3x4.ra;
+                });
+                $emailINST.forEach((el) => {
+                    el.innerHTML = samuel3x4.emailINST;
+                });
                 $emailM.forEach((el) => {
                     el.innerHTML = samuel.email;
                 });
@@ -443,11 +483,21 @@ const whichUser = setInterval(() => {
             }
 
             case "pietra": {
-                $perfilIMG.src = pietra.profileIMG;
-                $perfilNAME.innerHTML = pietra.fullname;
-                $perfilRM.innerHTML = pietra.rm;
-                $perfilRA.innerHTML = pietra.ra;
-                $emailINST.innerHTML = pietra.emailINST;
+                $perfilIMG.forEach((el) => {
+                    el.src = pietra.profileIMG;
+                });
+                $perfilNAME.forEach((el) => {
+                    el.innerHTML = pietra.fullname;
+                });
+                $perfilRM.forEach((el) => {
+                    el.innerHTML = pietra.rm;
+                });
+                $perfilRA.forEach((el) => {
+                    el.innerHTML = pietra.ra;
+                });
+                $emailINST.forEach((el) => {
+                    el.innerHTML = pietra.emailINST;
+                });
                 $emailM.forEach((el) => {
                     el.innerHTML = pietra.email;
                 });
@@ -478,11 +528,21 @@ const whichUser = setInterval(() => {
 
             // Usuarios do fora do TCC
             case "luis_henrique": {
-                $perfilIMG.src = luis_henrique.profileIMG;
-                $perfilNAME.innerHTML = luis_henrique.fullname;
-                $perfilRM.innerHTML = luis_henrique.rm;
-                $perfilRA.innerHTML = luis_henrique.ra;
-                $emailINST.innerHTML = luis_henrique.emailINST;
+                $perfilIMG.forEach((el) => {
+                    el.src = luis_henrique.profileIMG;
+                });
+                $perfilNAME.forEach((el) => {
+                    el.innerHTML = luis_henrique.fullname;
+                });
+                $perfilRM.forEach((el) => {
+                    el.innerHTML = luis_henrique.rm;
+                });
+                $perfilRA.forEach((el) => {
+                    el.innerHTML = luis_henrique.ra;
+                });
+                $emailINST.forEach((el) => {
+                    el.innerHTML = luis_henrique.emailINST;
+                });
                 $emailM.forEach((el) => {
                     el.innerHTML = luis_henrique.email;
                 });
