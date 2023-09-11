@@ -225,12 +225,11 @@
         });
     });
 
-    $btnMenu__perfil.forEach((el) => {
-        el.addEventListener("click", () => {
+    $btnMenu__perfil.addEventListener("click", () => {
             accessDisplayOPT(16);
             $mainAluno__perfil.style.display = "none";
         });
-    });
+ 
 
     $vacinaRadio.forEach((el) => {
         el.addEventListener("click", () => {
