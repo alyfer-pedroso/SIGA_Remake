@@ -14,6 +14,7 @@ const pietra3x4 = "../imgs/perfil/pietra3x4.jpeg";
 // Usuarios fora do tcc
 const luis_henrique3x4 = "../imgs/perfil/luishenrique3x4.jpeg";
 const guilherme_bretas3x4 = "../imgs/perfil/guilhermeBretas3x4.jpeg"
+const gustavo_campos3x4 = "../imgs/perfil/gustavoCampos3x4.jpeg"
 
 class User {
     constructor({ fullname, emailINST, email, phone, phoneT, phone2, phoneT2, rm, ra, pass, course, profileIMG, street, neighborhood, cep }) {
@@ -167,6 +168,24 @@ let guilherme_bretas = new User({
     cep: "18520-000",
 });
 
+let gustavo_campos = new User({
+    fullname: "Gustavo da Silva Campos",
+    emailINST: "gustavo.campos54@etec.sp.gov.br",
+    email: "gustacampos14@gmail.com",
+    phone: "(15)3384-2444",
+    phoneT: "(Telefone Residencial)",
+    phone2: "(15)98138-0516",
+    phoneT2: "(Telefone Residencial)",
+    rm: "20212480076",
+    ra: "000106771476-5/SP",
+    pass: "cinema250",
+    course: courses.ADM_OLD,
+    profileIMG: gustavo_campos3x4,
+    street: "PARAIBA, 15 - A",
+    neighborhood: "PARQUE ALVORADA - Cerquilho/SP",
+    cep: "18520-000",
+});
+
 //Verificando para login
 const $loginDisplay = document.getElementById("loginBody");
 const $alunoDisplay = document.getElementById("alunoBody");
@@ -306,6 +325,25 @@ if ($loginDisplay) {
                         localStorage.clear();
                     }
                     localStorage.setItem("User", "guilherme_bretas");
+                    if ($checkRemember.checked == true) {
+                        localStorage.setItem("remember", "true");
+                    } else {
+                        localStorage.setItem("remember", "false");
+                    }
+                    open("../aluno.html", "_self");
+                } else {
+                    alert("Senha incorreta!");
+                    $pass.value = "";
+                }
+                break;
+            }
+            
+            case gustavo_campos.rm: {
+                if ($pass.value === gustavo_campos.pass) {
+                    if (localStorage.user) {
+                        localStorage.clear();
+                    }
+                    localStorage.setItem("User", "gustavo_campos");
                     if ($checkRemember.checked == true) {
                         localStorage.setItem("remember", "true");
                     } else {
@@ -654,6 +692,50 @@ const whichUser = setInterval(() => {
                 });
                 $teleTipo2.forEach((el) => {
                     el.innerHTML = guilherme_bretas.phoneNumber2.phoneType;
+                });
+                clearInterval(whichUser);
+                break;
+            }
+
+            case "gustavo_campos": {
+                $perfilIMG.forEach((el) => {
+                    el.src = gustavo_campos.profileIMG;
+                });
+                $perfilNAME.forEach((el) => {
+                    el.innerHTML = gustavo_campos.fullname;
+                });
+                $perfilRM.forEach((el) => {
+                    el.innerHTML = gustavo_campos.rm;
+                });
+                $perfilRA.forEach((el) => {
+                    el.innerHTML = gustavo_campos.ra;
+                });
+                $emailINST.forEach((el) => {
+                    el.innerHTML = gustavo_campos.emailINST;
+                });
+                $emailM.forEach((el) => {
+                    el.innerHTML = gustavo_campos.email;
+                });
+                $perfilRua.forEach((el) => {
+                    el.innerHTML = gustavo_campos.street;
+                });
+                $perfilBairro.forEach((el) => {
+                    el.innerHTML = gustavo_campos.neighborhood;
+                });
+                $perfilCep.forEach((el) => {
+                    el.innerHTML = gustavo_campos.cep;
+                });
+                $telefone1.forEach((el) => {
+                    el.innerHTML = gustavo_campos.phoneNumber.phoneN;
+                });
+                $telefone2.forEach((el) => {
+                    el.innerHTML = gustavo_campos.phoneNumber2.phoneN;
+                });
+                $teleTipo1.forEach((el) => {
+                    el.innerHTML = gustavo_campos.phoneNumber.phoneType;
+                });
+                $teleTipo2.forEach((el) => {
+                    el.innerHTML = gustavo_campos.phoneNumber2.phoneType;
                 });
                 clearInterval(whichUser);
                 break;
