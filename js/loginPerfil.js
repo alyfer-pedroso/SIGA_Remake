@@ -15,6 +15,7 @@ const pietra3x4 = "../imgs/perfil/pietra3x4.jpeg";
 const luis_henrique3x4 = "../imgs/perfil/luishenrique3x4.jpeg";
 const guilherme_bretas3x4 = "../imgs/perfil/guilhermeBretas3x4.jpeg"
 const gustavo_campos3x4 = "../imgs/perfil/gustavoCampos3x4.jpeg"
+const luisGDCM3x4 = "../imgs/perfil/luisGDCM3x4.jpeg"
 
 class User {
     constructor({ fullname, emailINST, email, phone, phoneT, phone2, phoneT2, rm, ra, pass, course, profileIMG, street, neighborhood, cep }) {
@@ -186,6 +187,24 @@ let gustavo_campos = new User({
     cep: "18520-000",
 });
 
+let luisGDCM = new User({
+    fullname: "Luis Gustavo da Cruz Medeiros",
+    emailINST: "luiz.medeiros14@etec.sp.gov.br",
+    email: "gustavo200545@gmail.com",
+    phone: "(15)98830-6304",
+    phoneT: "(Telefone Celular)",
+    phone2: "(15)99638-0494",
+    phoneT2: "(Telefone Celular)",
+    rm: "20212480051",
+    ra: "000109650165-X/SP",
+    pass: "Lgdcm450SIGA",   
+    course: courses.ADM_OLD,
+    profileIMG: luisGDCM3x4,
+    street: "ANTONIO BET., 29 - CASA",
+    neighborhood: "SAO FRANCISCO 2 - Cerquilho/SP",
+    cep: "18520-000",
+});
+
 //Verificando para login
 const $loginDisplay = document.getElementById("loginBody");
 const $alunoDisplay = document.getElementById("alunoBody");
@@ -344,6 +363,25 @@ if ($loginDisplay) {
                         localStorage.clear();
                     }
                     localStorage.setItem("User", "gustavo_campos");
+                    if ($checkRemember.checked == true) {
+                        localStorage.setItem("remember", "true");
+                    } else {
+                        localStorage.setItem("remember", "false");
+                    }
+                    open("../aluno.html", "_self");
+                } else {
+                    alert("Senha incorreta!");
+                    $pass.value = "";
+                }
+                break;
+            }
+
+            case luisGDCM.rm: {
+                if ($pass.value === luisGDCM.pass) {
+                    if (localStorage.user) {
+                        localStorage.clear();
+                    }
+                    localStorage.setItem("User", "luisGDCM");
                     if ($checkRemember.checked == true) {
                         localStorage.setItem("remember", "true");
                     } else {
@@ -736,6 +774,50 @@ const whichUser = setInterval(() => {
                 });
                 $teleTipo2.forEach((el) => {
                     el.innerHTML = gustavo_campos.phoneNumber2.phoneType;
+                });
+                clearInterval(whichUser);
+                break;
+            }
+
+            case "luisGDCM": {
+                $perfilIMG.forEach((el) => {
+                    el.src = luisGDCM.profileIMG;
+                });
+                $perfilNAME.forEach((el) => {
+                    el.innerHTML = luisGDCM.fullname;
+                });
+                $perfilRM.forEach((el) => {
+                    el.innerHTML = luisGDCM.rm;
+                });
+                $perfilRA.forEach((el) => {
+                    el.innerHTML = luisGDCM.ra;
+                });
+                $emailINST.forEach((el) => {
+                    el.innerHTML = luisGDCM.emailINST;
+                });
+                $emailM.forEach((el) => {
+                    el.innerHTML = luisGDCM.email;
+                });
+                $perfilRua.forEach((el) => {
+                    el.innerHTML = luisGDCM.street;
+                });
+                $perfilBairro.forEach((el) => {
+                    el.innerHTML = luisGDCM.neighborhood;
+                });
+                $perfilCep.forEach((el) => {
+                    el.innerHTML = luisGDCM.cep;
+                });
+                $telefone1.forEach((el) => {
+                    el.innerHTML = luisGDCM.phoneNumber.phoneN;
+                });
+                $telefone2.forEach((el) => {
+                    el.innerHTML = luisGDCM.phoneNumber2.phoneN;
+                });
+                $teleTipo1.forEach((el) => {
+                    el.innerHTML = luisGDCM.phoneNumber.phoneType;
+                });
+                $teleTipo2.forEach((el) => {
+                    el.innerHTML = luisGDCM.phoneNumber2.phoneType;
                 });
                 clearInterval(whichUser);
                 break;
