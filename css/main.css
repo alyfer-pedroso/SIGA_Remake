@@ -312,7 +312,7 @@ select:hover {
     justify-content: space-between;
     align-items: center;
     z-index: 5;
-    border-bottom: 4px solid var(--primary-color);
+    /* border-bottom: 4px solid var(--primary-color); */
     /* border-radius: 0 0 10px 10px; */
 }
 .headerAluno img:first-child {
@@ -333,6 +333,7 @@ select:hover {
     min-height: 100vh;
     width: 100%;
     background-color: #333;
+    /* background-image: radial-gradient(ellipse at bottom center, var(--primary-color), rgb(37, 1, 1)); */
     padding-bottom: 6rem;
     /* position: fixed;
     left: 0;
@@ -501,29 +502,37 @@ select:hover {
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: flex-end;
     padding: 1rem;
     text-align: left;
     font-size: 1rem;
     /* font-weight: bold; */
     font-family: inherit;
     position: relative;
+    transition: transform 0.2s ease;
+    color: #5f0000;
 }
 .optionsNav__card div {
     width: 100%;
 }
-.optionsNav__card i {
+.optionsNav__card span {
     font-size: 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.optionsNav__card p {
-    color: #5f0000;
-}
-.optionsNav__card p + i {
+/* .optionsNav__card p + i {
     font-size: 1rem;
     position: absolute;
     bottom: 1rem;
     right: 1rem;
-}
+} */
 .optionsNav__btnContainer {
     padding: 1rem;
     display: flex;
@@ -536,7 +545,7 @@ select:hover {
     font-size: 1rem;
     font-weight: bold;
     padding: 1.2rem;
-    width: 90%;
+    width: 100%;
     border-radius: 10px;
     border: none;
     outline: none;
@@ -1192,8 +1201,13 @@ select:hover {
     background-color: white;
 }
 
-[class*="OPT-"]:hover {
+[class*="optionsNav__card OPT-"]:hover {
     background-color: white;
+    color: #b20000;
+    font-weight: bold;
+    z-index: 3;
+    /* animation: floating 2s ease-in infinite; */
+    transform: scale(1.1);
 }
 [class*="frequency__card"]:hover {
     background-color: #e40404;
@@ -1385,4 +1399,7 @@ select:hover {
     to {
         transform: rotate(1turn);
     }
+}
+
+@keyframes floating {
 }
