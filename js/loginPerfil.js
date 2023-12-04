@@ -3,6 +3,8 @@ const courses = {
     ADM: "MTEC-PI-Administração",
     ADM_OLD: "ETIM-Administração",
     MODA: "MTEC-PI-Modelagem",
+    BANCA: "ETEC-Professor",
+    VISITANTE: "VISITANTE",
 };
 
 const alyfer3x4 = "../imgs/perfil/alyfer3x4.jpeg";
@@ -11,14 +13,36 @@ const erick3x4 = "../imgs/perfil/erick3x4.jpeg";
 const samuel3x4 = "../imgs/perfil/samuel3x4.jpeg";
 const pietra3x4 = "../imgs/perfil/pietra3x4.jpeg";
 
+// Professores - Banca
+const ricardo3x4 = "../imgs/perfil/ricardo3x4.jpeg";
+const anacleto3x4 = "../imgs/perfil/anacleto3x4.jpeg";
+const marilia3x4 = "../imgs/perfil/marilia3x4.jpeg";
+const visitante3x4 = "../imgs/perfil/visitante3x4.jpeg";
+
 // Usuarios fora do tcc
 const luis_henrique3x4 = "../imgs/perfil/luishenrique3x4.jpeg";
-const guilherme_bretas3x4 = "../imgs/perfil/guilhermeBretas3x4.jpeg"
-const gustavo_campos3x4 = "../imgs/perfil/gustavoCampos3x4.jpeg"
-const luisGDCM3x4 = "../imgs/perfil/luisGDCM3x4.jpeg"
+const guilherme_bretas3x4 = "../imgs/perfil/guilhermeBretas3x4.jpeg";
+const gustavo_campos3x4 = "../imgs/perfil/gustavoCampos3x4.jpeg";
+const luisGDCM3x4 = "../imgs/perfil/luisGDCM3x4.jpeg";
 
 class User {
-    constructor({ fullname, emailINST, email, phone, phoneT, phone2, phoneT2, rm, ra, pass, course, profileIMG, street, neighborhood, cep }) {
+    constructor({
+        fullname,
+        emailINST,
+        email,
+        phone,
+        phoneT,
+        phone2,
+        phoneT2,
+        rm,
+        ra,
+        pass,
+        course,
+        profileIMG,
+        street,
+        neighborhood,
+        cep,
+    }) {
         this.fullname = fullname;
         this.emailINST = emailINST;
         this.email = email;
@@ -42,7 +66,7 @@ class User {
 }
 
 // Usuarios do TCC
-let alyfer = new User({
+const alyfer = new User({
     fullname: "Alyfer Leandro de Araujo Pedroso",
     emailINST: "alyfer.pedroso@etec.sp.gov.br",
     email: "alyferleandroap178@gmail.com",
@@ -60,7 +84,7 @@ let alyfer = new User({
     cep: "18520-000",
 });
 
-let emily = new User({
+const emily = new User({
     fullname: "Emily Glinkovski",
     emailINST: "emily.glinkovski@etec.sp.gov.br",
     email: "emilyglinkovski@gmail.com",
@@ -78,7 +102,7 @@ let emily = new User({
     cep: "18520-000",
 });
 
-let erick = new User({
+const erick = new User({
     fullname: "Erick Lopez de Queiroz",
     emailINST: "erick.queiroz2@etec.sp.gov.br",
     email: "cris.tapete@gmail.com",
@@ -96,7 +120,7 @@ let erick = new User({
     cep: "18520-000",
 });
 
-let samuel = new User({
+const samuel = new User({
     fullname: "Samuel Antonio Paes Proença",
     emailINST: "samuel.proenca3@etec.sp.gov.br",
     email: "samyuerupuroensa@hotmail.com",
@@ -114,7 +138,7 @@ let samuel = new User({
     cep: "18520-000",
 });
 
-let pietra = new User({
+const pietra = new User({
     fullname: "Pietra Rosa Baião",
     emailINST: "pietra.baiao@etec.sp.gov.br",
     email: "piiiibaiao@gmail.com",
@@ -132,8 +156,81 @@ let pietra = new User({
     cep: "185270876",
 });
 
+// Usuarios da Banca
+const visitante = new User({
+    fullname: "Visitante",
+    emailINST: "visitante@etec.sp.gov.br",
+    email: "visitante@gmail.com",
+    phone: "(00)12345-6789",
+    phoneT: "(Telefone Celular)",
+    phone2: "(00)12345-6789",
+    phoneT2: "(Telefone Residencial)",
+    rm: "20212480000",
+    ra: "010101010101-0/SP",
+    pass: "123456",
+    course: courses.VISITANTE,
+    profileIMG: visitante3x4,
+    street: "RUA ETEC DE CERQUILHO, 123 - CASA",
+    neighborhood: "ETEC DE CERQUILHO - Cerquilho/SP",
+    cep: "18520-000",
+});
+
+const carlos_anacleto = new User({
+    fullname: "Antônio Carlos Anacleto",
+    emailINST: "antonio.anacleto@etec.sp.gov.br",
+    email: "antonio.anacleto@gmail.com",
+    phone: "(00)12345-6789",
+    phoneT: "(Telefone Celular)",
+    phone2: "(00)12345-6789",
+    phoneT2: "(Telefone Residencial)",
+    rm: "20212480001",
+    ra: "010101010101-0/SP",
+    pass: "123456",
+    course: courses.BANCA,
+    profileIMG: anacleto3x4,
+    street: "RUA ETEC DE CERQUILHO, 123 - CASA",
+    neighborhood: "ETEC DE CERQUILHO - Cerquilho/SP",
+    cep: "18520-000",
+});
+
+const ricardo = new User({
+    fullname: "Ricardo de Oliveira Faria",
+    emailINST: "ricardo.faria16@etec.sp.gov.br",
+    email: "ricardo.faria16@gmail.com",
+    phone: "(00)12345-6789",
+    phoneT: "(Telefone Celular)",
+    phone2: "(00)12345-6789",
+    phoneT2: "(Telefone Residencial)",
+    rm: "20212480002",
+    ra: "010101010101-0/SP",
+    pass: "123456",
+    course: courses.BANCA,
+    profileIMG: ricardo3x4,
+    street: "RUA ETEC DE CERQUILHO, 123 - CASA",
+    neighborhood: "ETEC DE CERQUILHO - Cerquilho/SP",
+    cep: "18520-000",
+});
+
+const marilia = new User({
+    fullname: "Marília Fogaça Armbruster",
+    emailINST: "marilia.fogaca01@etec.sp.gov.br",
+    email: "marilia.fogaca01@gmail.com",
+    phone: "(00)12345-6789",
+    phoneT: "(Telefone Celular)",
+    phone2: "(00)12345-6789",
+    phoneT2: "(Telefone Residencial)",
+    rm: "20212480003",
+    ra: "010101010101-0/SP",
+    pass: "123456",
+    course: courses.BANCA,
+    profileIMG: marilia3x4,
+    street: "RUA ETEC DE CERQUILHO, 123 - CASA",
+    neighborhood: "ETEC DE CERQUILHO - Cerquilho/SP",
+    cep: "18520-000",
+});
+
 // Usuarios fora do TCC
-let luis_henrique = new User({
+const luis_henrique = new User({
     fullname: "Luis Henrique Santos de Jesus",
     emailINST: "luis.jesus18@etec.sp.gov.br",
     email: "luishenriquesantosdejesus02@gmail.com",
@@ -151,7 +248,7 @@ let luis_henrique = new User({
     cep: "18520-000",
 });
 
-let guilherme_bretas = new User({
+const guilherme_bretas = new User({
     fullname: "Guilherme Bretas Cardoso",
     emailINST: "guilherme.cardoso74@etec.sp.gov.br",
     email: "gui.bretas11@gmail.com",
@@ -169,7 +266,7 @@ let guilherme_bretas = new User({
     cep: "18520-000",
 });
 
-let gustavo_campos = new User({
+const gustavo_campos = new User({
     fullname: "Gustavo da Silva Campos",
     emailINST: "gustavo.campos54@etec.sp.gov.br",
     email: "gustacampos14@gmail.com",
@@ -187,7 +284,7 @@ let gustavo_campos = new User({
     cep: "18520-000",
 });
 
-let luisGDCM = new User({
+const luisGDCM = new User({
     fullname: "Luis Gustavo da Cruz Medeiros",
     emailINST: "luiz.medeiros14@etec.sp.gov.br",
     email: "gustavo200545@gmail.com",
@@ -197,7 +294,7 @@ let luisGDCM = new User({
     phoneT2: "(Telefone Celular)",
     rm: "20212480051",
     ra: "000109650165-X/SP",
-    pass: "Lgdcm450SIGA",   
+    pass: "Lgdcm450SIGA",
     course: courses.ADM_OLD,
     profileIMG: luisGDCM3x4,
     street: "ANTONIO BET., 29 - CASA",
@@ -318,6 +415,83 @@ if ($loginDisplay) {
                 break;
             }
 
+            // Usuarios da Banca
+            case visitante.rm: {
+                if ($pass.value === visitante.pass) {
+                    if (localStorage.user) {
+                        localStorage.clear();
+                    }
+                    localStorage.setItem("User", "visitante");
+                    if ($checkRemember.checked == true) {
+                        localStorage.setItem("remember", "true");
+                    } else {
+                        localStorage.setItem("remember", "false");
+                    }
+                    open("../aluno.html", "_self");
+                } else {
+                    alert("Senha incorreta!");
+                    $pass.value = "";
+                }
+                break;
+            }
+
+            case carlos_anacleto.rm: {
+                if ($pass.value === carlos_anacleto.pass) {
+                    if (localStorage.user) {
+                        localStorage.clear();
+                    }
+                    localStorage.setItem("User", "carlos_anacleto");
+                    if ($checkRemember.checked == true) {
+                        localStorage.setItem("remember", "true");
+                    } else {
+                        localStorage.setItem("remember", "false");
+                    }
+                    open("../aluno.html", "_self");
+                } else {
+                    alert("Senha incorreta!");
+                    $pass.value = "";
+                }
+                break;
+            }
+
+            case ricardo.rm: {
+                if ($pass.value === ricardo.pass) {
+                    if (localStorage.user) {
+                        localStorage.clear();
+                    }
+                    localStorage.setItem("User", "ricardo");
+                    if ($checkRemember.checked == true) {
+                        localStorage.setItem("remember", "true");
+                    } else {
+                        localStorage.setItem("remember", "false");
+                    }
+                    open("../aluno.html", "_self");
+                } else {
+                    alert("Senha incorreta!");
+                    $pass.value = "";
+                }
+                break;
+            }
+
+            case marilia.rm: {
+                if ($pass.value === marilia.pass) {
+                    if (localStorage.user) {
+                        localStorage.clear();
+                    }
+                    localStorage.setItem("User", "marilia");
+                    if ($checkRemember.checked == true) {
+                        localStorage.setItem("remember", "true");
+                    } else {
+                        localStorage.setItem("remember", "false");
+                    }
+                    open("../aluno.html", "_self");
+                } else {
+                    alert("Senha incorreta!");
+                    $pass.value = "";
+                }
+                break;
+            }
+
             // Usuarios fora do TCC
             case luis_henrique.rm: {
                 if ($pass.value === luis_henrique.pass) {
@@ -356,7 +530,7 @@ if ($loginDisplay) {
                 }
                 break;
             }
-            
+
             case gustavo_campos.rm: {
                 if ($pass.value === gustavo_campos.pass) {
                     if (localStorage.user) {
@@ -423,6 +597,7 @@ const whichUser = setInterval(() => {
         const $telefone2 = document.querySelectorAll(".telefone2");
         const $teleTipo1 = document.querySelectorAll(".tipoTelefone1");
         const $teleTipo2 = document.querySelectorAll(".tipoTelefone2");
+        const $courses = document.querySelectorAll(".perfil_cursos");
 
         // Usuarios do TCC
         switch (localStorage.getItem("User")) {
@@ -641,6 +816,195 @@ const whichUser = setInterval(() => {
                 });
                 $teleTipo2.forEach((el) => {
                     el.innerHTML = pietra.phoneNumber2.phoneType;
+                });
+                clearInterval(whichUser);
+                break;
+            }
+
+            // Usuarios da Banca
+            case "visitante": {
+                $perfilIMG.forEach((el) => {
+                    el.src = visitante.profileIMG;
+                });
+                $perfilNAME.forEach((el) => {
+                    el.innerHTML = visitante.fullname;
+                });
+                $perfilRM.forEach((el) => {
+                    el.innerHTML = visitante.rm;
+                });
+                $perfilRA.forEach((el) => {
+                    el.innerHTML = visitante.ra;
+                });
+                $emailINST.forEach((el) => {
+                    el.innerHTML = visitante.emailINST;
+                });
+                $emailM.forEach((el) => {
+                    el.innerHTML = visitante.email;
+                });
+                $perfilRua.forEach((el) => {
+                    el.innerHTML = visitante.street;
+                });
+                $perfilBairro.forEach((el) => {
+                    el.innerHTML = visitante.neighborhood;
+                });
+                $perfilCep.forEach((el) => {
+                    el.innerHTML = visitante.cep;
+                });
+                $telefone1.forEach((el) => {
+                    el.innerHTML = visitante.phoneNumber.phoneN;
+                });
+                $telefone2.forEach((el) => {
+                    el.innerHTML = visitante.phoneNumber2.phoneN;
+                });
+                $teleTipo1.forEach((el) => {
+                    el.innerHTML = visitante.phoneNumber.phoneType;
+                });
+                $teleTipo2.forEach((el) => {
+                    el.innerHTML = visitante.phoneNumber2.phoneType;
+                });
+                $courses.forEach((el) => {
+                    el.options[1].innerHTML = visitante.course;
+                });
+                clearInterval(whichUser);
+                break;
+            }
+
+            case "carlos_anacleto": {
+                $perfilIMG.forEach((el) => {
+                    el.src = carlos_anacleto.profileIMG;
+                });
+                $perfilNAME.forEach((el) => {
+                    el.innerHTML = carlos_anacleto.fullname;
+                });
+                $perfilRM.forEach((el) => {
+                    el.innerHTML = carlos_anacleto.rm;
+                });
+                $perfilRA.forEach((el) => {
+                    el.innerHTML = carlos_anacleto.ra;
+                });
+                $emailINST.forEach((el) => {
+                    el.innerHTML = carlos_anacleto.emailINST;
+                });
+                $emailM.forEach((el) => {
+                    el.innerHTML = carlos_anacleto.email;
+                });
+                $perfilRua.forEach((el) => {
+                    el.innerHTML = carlos_anacleto.street;
+                });
+                $perfilBairro.forEach((el) => {
+                    el.innerHTML = carlos_anacleto.neighborhood;
+                });
+                $perfilCep.forEach((el) => {
+                    el.innerHTML = carlos_anacleto.cep;
+                });
+                $telefone1.forEach((el) => {
+                    el.innerHTML = carlos_anacleto.phoneNumber.phoneN;
+                });
+                $telefone2.forEach((el) => {
+                    el.innerHTML = carlos_anacleto.phoneNumber2.phoneN;
+                });
+                $teleTipo1.forEach((el) => {
+                    el.innerHTML = carlos_anacleto.phoneNumber.phoneType;
+                });
+                $teleTipo2.forEach((el) => {
+                    el.innerHTML = carlos_anacleto.phoneNumber2.phoneType;
+                });
+                $courses.forEach((el) => {
+                    el.options[1].innerHTML = carlos_anacleto.course;
+                });
+                clearInterval(whichUser);
+                break;
+            }
+
+            case "ricardo": {
+                $perfilIMG.forEach((el) => {
+                    el.src = ricardo.profileIMG;
+                });
+                $perfilNAME.forEach((el) => {
+                    el.innerHTML = ricardo.fullname;
+                });
+                $perfilRM.forEach((el) => {
+                    el.innerHTML = ricardo.rm;
+                });
+                $perfilRA.forEach((el) => {
+                    el.innerHTML = ricardo.ra;
+                });
+                $emailINST.forEach((el) => {
+                    el.innerHTML = ricardo.emailINST;
+                });
+                $emailM.forEach((el) => {
+                    el.innerHTML = ricardo.email;
+                });
+                $perfilRua.forEach((el) => {
+                    el.innerHTML = ricardo.street;
+                });
+                $perfilBairro.forEach((el) => {
+                    el.innerHTML = ricardo.neighborhood;
+                });
+                $perfilCep.forEach((el) => {
+                    el.innerHTML = ricardo.cep;
+                });
+                $telefone1.forEach((el) => {
+                    el.innerHTML = ricardo.phoneNumber.phoneN;
+                });
+                $telefone2.forEach((el) => {
+                    el.innerHTML = ricardo.phoneNumber2.phoneN;
+                });
+                $teleTipo1.forEach((el) => {
+                    el.innerHTML = ricardo.phoneNumber.phoneType;
+                });
+                $teleTipo2.forEach((el) => {
+                    el.innerHTML = ricardo.phoneNumber2.phoneType;
+                });
+                $courses.forEach((el) => {
+                    el.options[1].innerHTML = ricardo.course;
+                });
+                clearInterval(whichUser);
+                break;
+            }
+
+            case "marilia": {
+                $perfilIMG.forEach((el) => {
+                    el.src = marilia.profileIMG;
+                });
+                $perfilNAME.forEach((el) => {
+                    el.innerHTML = marilia.fullname;
+                });
+                $perfilRM.forEach((el) => {
+                    el.innerHTML = marilia.rm;
+                });
+                $perfilRA.forEach((el) => {
+                    el.innerHTML = marilia.ra;
+                });
+                $emailINST.forEach((el) => {
+                    el.innerHTML = marilia.emailINST;
+                });
+                $emailM.forEach((el) => {
+                    el.innerHTML = marilia.email;
+                });
+                $perfilRua.forEach((el) => {
+                    el.innerHTML = marilia.street;
+                });
+                $perfilBairro.forEach((el) => {
+                    el.innerHTML = marilia.neighborhood;
+                });
+                $perfilCep.forEach((el) => {
+                    el.innerHTML = marilia.cep;
+                });
+                $telefone1.forEach((el) => {
+                    el.innerHTML = marilia.phoneNumber.phoneN;
+                });
+                $telefone2.forEach((el) => {
+                    el.innerHTML = marilia.phoneNumber2.phoneN;
+                });
+                $teleTipo1.forEach((el) => {
+                    el.innerHTML = marilia.phoneNumber.phoneType;
+                });
+                $teleTipo2.forEach((el) => {
+                    el.innerHTML = marilia.phoneNumber2.phoneType;
+                });
+                $courses.forEach((el) => {
+                    el.options[1].innerHTML = marilia.course;
                 });
                 clearInterval(whichUser);
                 break;

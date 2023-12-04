@@ -49,10 +49,6 @@
         radioVacina();
     });
 
-    window.addEventListener("dblclick", () => {
-        document.querySelector("html").requestFullscreen();
-    });
-
     if (isHome) {
         footerButtons.forEach((el) => {
             el.classList.remove("markedBTN");
