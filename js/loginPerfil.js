@@ -7,6 +7,8 @@ const courses = {
     VISITANTE: "VISITANTE",
 };
 
+const visitante3x4 = "../imgs/perfil/visitante3x4.jpeg";
+
 class User {
     constructor({
         fullname,
